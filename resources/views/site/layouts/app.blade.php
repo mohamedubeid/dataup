@@ -3,12 +3,13 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 @endphp
 
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ app()->getLocale() }}" dir="{{ app()->getLocale() === 'ar' ? 'rtl' : 'ltr' }}">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>DataUp</title>
+        <title>@yield('title', 'DataUp')</title>
+        <meta name="description" content="@yield("desc", "Transforming Data into Insights with Precision")">
         <!-- favicon -->
         <link rel="icon" href="{{ asset('favicon.svg') }}" type="image/svg+xml">
         <!-- Boot Strap -->
@@ -22,18 +23,21 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
     </head>
     <body>
-        <h1>{{ __('main.title') }}</h1>
-        <ul>
-            @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                <li>
-                    <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-                        {{ $properties['native'] }}
-                    </a>
-                </li>
-            @endforeach
-        </ul>
-        <a href="{{ LaravelLocalization::localizeUrl(route('test')) }}">{{ __('main.test') }}</a>
+
+        {{-- Header --}}
+        @include('site.layouts.header')
+
+        {{-- content --}}
+        <main>
+            @yield('content')
+        </main>
+
+        {{-- Footer --}}
+        @include('site.layouts.footer')
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        
+        {{-- Page-Specific Scripts --}}
+        @yield('scripts')
     </body>
 </html>

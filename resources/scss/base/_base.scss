@@ -6,17 +6,3 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-
-body {
-  direction: ltr;
-  text-align: left;
-}
-
-[dir="rtl"] {
-  direction: rtl;
-  text-align: right;
-
-  .container {
-      direction: rtl;
-  }
-}
