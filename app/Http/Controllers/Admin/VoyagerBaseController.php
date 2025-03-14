@@ -1,6 +1,6 @@
 <?php
 
-namespace TCG\Voyager\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use Exception;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -16,7 +16,9 @@ use TCG\Voyager\Events\BreadImagesDeleted;
 use TCG\Voyager\Facades\Voyager;
 use TCG\Voyager\Http\Controllers\Traits\BreadRelationshipParser;
 
-class VoyagerBaseController extends Controller
+use TCG\Voyager\Http\Controllers\VoyagerBaseController as BaseVoyagerBaseController;
+
+class VoyagerBaseController extends BaseVoyagerBaseController
 {
     use BreadRelationshipParser;
 
@@ -373,6 +375,10 @@ class VoyagerBaseController extends Controller
             $redirect = redirect()->back();
         }
 
+        if ($slug == 'home-blocks' || $slug == 'about-blocks') {
+            $redirect = redirect()->back();
+        }
+
         return $redirect->with([
             'message'    => __('voyager::generic.successfully_updated')." {$dataType->getTranslatedAttribute('display_name_singular')}",
             'alert-type' => 'success',
@@ -494,6 +500,17 @@ class VoyagerBaseController extends Controller
         }
 
         $affected = 0;
+
+        if ($slug == 'plans') {
+            $_ids = \App\Models\PlanFeature::where('plan_id', $id)->pluck('id')->toArray();
+            \App\Models\PlanFeature::destroy($_ids);
+        }
+
+        if ($slug == 'features') {
+            $_ids = \App\Models\PlanFeature::where('feature_id', $id)->pluck('id')->toArray();
+            \App\Models\PlanFeature::destroy($_ids);
+        }
+
         
         foreach ($ids as $id) {
             $data = call_user_func([$dataType->model_name, 'findOrFail'], $id);
