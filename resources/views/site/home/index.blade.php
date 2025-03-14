@@ -1,3 +1,7 @@
+@php
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
+@endphp
+
 @extends('site.layouts.app')
 
 @section('title', "DataUp")
@@ -7,6 +11,7 @@
 @section('content')
 
     <h1>{{ __('main.title') }}</h1>
+    <p>{{ $homeBlocks3->getTranslatedAttribute('title') }}</p>
     <ul>
         @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
             <li>
