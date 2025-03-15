@@ -1,0 +1,13 @@
+// Light mode (default)
+:root {
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --primary-color: #0d6efd;
+}
+
+// Dark mode
+[data-theme="dark"] {
+  --background-color: #121212;
+  --text-color: #ffffff;
+  --primary-color: #bb86fc;
+}

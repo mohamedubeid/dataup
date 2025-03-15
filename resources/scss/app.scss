@@ -1,4 +1,6 @@
 // abstracts
-@import 'abstracts/variables';
+@use 'abstracts/variables';
 // base
-@import 'base/base';
+@use 'base/base';
+
+@use 'theme'
