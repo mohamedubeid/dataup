@@ -10,13 +10,13 @@
   display: block;
 }
 
-
 .nav-link a p {
   position: relative;
   font-size: 16px;
   font-weight: 500;
   color: #010101;
   transition: color 0.3s ease, transform 0.3s ease;
+  width: fit-content;
 
   &:hover {
       color: #1BBB75;
@@ -42,7 +42,6 @@
   }
 }
 
-
 .cstm-dropdown {
   position: relative;
   .btn:first-child {
@@ -52,53 +51,83 @@
   }
 
   .dropdown-toggle {
-      font-size: 16px;
-      color: #010101;
-      background: transparent;
-      border: none;
-      transition: all 0.3s ease;
+    font-size: 16px;
+    color: #010101;
+    background: transparent;
+    border: none;
+    transition: all 0.3s ease;
 
-      &:hover,
-      &:focus {
-          color: #1BBB75;
-      }
+    &:hover,
+    &:focus {
+        color: #1BBB75;
+    }
 
-      &::after {
-          transition: transform 0.3s ease-in-out;
-      }
+    &::after {
+        transition: transform 0.3s ease-in-out;
+    }
 
-      &[aria-expanded="true"]::after {
-          transform: rotate(180deg);
-      }
+    &[aria-expanded="true"]::after {
+        transform: rotate(180deg);
+    }
   }
 
   .dropdown-menu {
-      border: none;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      transition:  0.3s ease-in-out;
-      .dropdown-item {
-          font-size: 14px;
-          padding: 10px 16px;
-          transition: color 0.6s ease, transform 0.6s ease;
+    border: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition:  0.3s ease-in-out;
+    .dropdown-item {
+        font-size: 14px;
+        padding: 10px 16px;
+        transition: color 0.6s ease, transform 0.6s ease;
 
-          &:hover {
-              background: #1BBB75;
-              color: #fff;
-              transform: translateX(5px);
-          }
-      }
+        &:hover {
+            background: #1BBB75;
+            color: #fff;
+            transform: translateX(5px);
+        }
+    }
   }
 }
 
 .dropdown-divider {
-  width: 100px;
+  width: 200px;
   margin: auto;
+  border: 5px;
 }
 
 @media (max-width: 1200px) {
   .logo-style {
     width: 150px;
     height: auto;
+  }
+}
+
+.menu-icon-style {
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.cstm-offcanvas {
+  width: 33.33% !important;
+  transition: transform 0.6s ease-in-out, visibility 0.6s ease-in-out;
+}
+
+@media (max-width: 1400px) {
+  .cstm-offcanvas {
+    width: 33.33% !important;
+  }
+}
+@media (max-width: 1299px) {
+  .cstm-offcanvas {
+    width: 50% !important;
+  }
+}
+@media (max-width: 425.89px) {
+
+  .cstm-offcanvas {
+    width: 100% !important;
   }
 }

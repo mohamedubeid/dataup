@@ -4,14 +4,14 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 <header>
   <div class="container">
-    <div class="row flex-nowrap align-items-center justify-content-between mt-4 pt-2 d-none d-lg-flex">
+    <div class="row flex-nowrap align-items-center justify-content-between mt-4 pt-2">
       <div class="col-auto">
         <img id="logo-light" src="images/logo-light.svg" alt="dataup-light" width="173px" height="56px" class="logo-style"/>
         <img id="logo-dark" src="images/logo-dark.svg" alt="dataup-dark" width="173px" height="56px" class="logo-style"/>
       </div>
       <div class="col-auto">
         <div class="d-flex align-items-center justify-content-center gap-3">
-          <div class="d-flex align-items-center justify-content-between gap-4 nav-link">
+          <div class="d-flex align-items-center justify-content-between gap-4 nav-link d-none d-lg-flex">
             <a href="#"><p>{{ __('main.services')}}</p></a>
             <a href="#"><p>{{ __('main.customers')}}</p></a>
             <a href="#"><p>{{ __('main.pricing')}}</p></a>
@@ -27,6 +27,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
             </div>
             <button type="button" class="cstm-btn">{{ __('main.getstarted') }}</button>
           </div>
+          @include('site.layouts.mobile-menu')
           <div class="d-flex align-items-center gap-2">
             <button id="themeToggle" class="theme-toggle">🌙</button>
             @php
@@ -40,6 +41,5 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
         </div>
       </div>
     </div>
-    @include('site.layouts.mobile-menu')
   </div>
 </header>

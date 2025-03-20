@@ -3,7 +3,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 @endphp
 
 <!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}" dir="{{ LaravelLocalization::getCurrentLocale() === 'ar' ? 'rtl' : 'ltr' }}">
+<html lang="{{ LaravelLocalization::getCurrentLocale() }}" dir="{{ LaravelLocalization::getCurrentLocale() === 'ar' ? 'rtl' : 'ltr' }}">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
