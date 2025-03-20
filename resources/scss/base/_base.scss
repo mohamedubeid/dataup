@@ -11,4 +11,60 @@
 body {
   background-color: var(--background-color);
   color: var(--text-color);
+  background-image: url('/public/images/backgroun.png');
+  background-repeat: repeat-y;
+  background-size: 100% auto;
+  background-position: top center;
+  transition: background-color 0.3s ease-in-out;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p {
+  margin: 0;
+}
+
+.theme-toggle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--toggle-bg);
+  color: var(--toggle-icon);
+
+  &:hover {
+    filter: brightness(1.1);
+    transform: scale(1.1);
+  }
+}
+
+.language-toggle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--toggle-bg);
+  color: var(--toggle-icon);
+  text-decoration: none;
+  &:hover {
+    filter: brightness(1.1);
+    transform: scale(1.1);
+  }
 }

@@ -1,13 +1,29 @@
 // Light mode (default)
 :root {
-  --background-color: #ffffff;
-  --text-color: #333333;
-  --primary-color: #0d6efd;
+  --background-color: #EFEFEF;
+  --text-color: #000;
+  --primary-color: #23BF7C;
+  // BootStrap
+  --bs-primary: #23BF7C;
+  .btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #23BF7C;
+    --bs-btn-border-color: #23BF7C;
+    --bs-btn-hover-bg: #168555;
+    --bs-btn-hover-border-color: #23BF7C;
+    --bs-btn-active-bg: #136845;
+    --bs-btn-active-border-color: #23BF7C;
+  }
+  // Nav Toggle Buttons
+  --toggle-bg: #f0f0f0;
+  --toggle-icon: #111;
 }
 
 // Dark mode
 [data-theme="dark"] {
-  --background-color: #121212;
+  --background-color: #121317;
   --text-color: #ffffff;
-  --primary-color: #bb86fc;
+  // Nav Toggle Buttons
+  --toggle-bg: #333;
+  --toggle-icon: #f0f0f0;
 }

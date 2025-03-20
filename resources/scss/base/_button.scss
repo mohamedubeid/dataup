@@ -1,0 +1,82 @@
+.cstm-btn {
+  background: #23BF7C;
+  color: #fff;
+  border-radius: 98px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  border: none;
+  transition: 0.4s ease-in-out;
+  &:hover {
+    background: #1c925f;
+  }
+}
+[data-theme="dark"] .cstm-btn {
+  color: #090909;
+}
+
+.hero-btn {
+  @extend .cstm-btn;
+  box-shadow: 0px 0px 44px 0px #23BF7C4D;
+  background: #141414;
+  font-size: 18px;
+  letter-spacing: 0%;
+  &:hover {
+    background: #000000;
+  }
+}
+
+.choose-plan-sec-btn {
+  @extend .cstm-btn;
+  width: 100%;
+  background: rgba(35, 191, 124, 0.1);
+  color: #23BF7C;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 700;
+  &:hover {
+    background: rgba(35, 191, 124, 0.3);
+    color: rgba(35, 191, 124, 0.7);
+  }
+}
+[data-theme="dark"] .choose-plan-sec {
+  color: #23BF7C;
+}
+
+.choose-plan-prim-btn {
+  @extend .choose-plan-sec;
+  background-color: #fff;
+  color: #5243C2;
+  &:hover {
+    background-color: #fcfcfc;
+    color: #7e74cc;
+  }
+}
+[data-theme="dark"] .choose-plan-sec {
+  color: #5243C2;
+  &:hover {
+    background-color: #ffffffca;
+    color: #7165c8;
+  }
+}
+
+.form-btn {
+  @extend .cstm-btn;
+  color: #000;
+  padding: 12px 48px;
+}
+
+.footer-btn {
+  @extend .cstm-btn;
+  color: #000;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 16.5px 48px;
+}
+[data-theme="dark"] .footer-btn {
+  background: #9DE619;
+  &:hover {
+    background-color: #80ba14;
+  }
+}

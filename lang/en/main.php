@@ -9,4 +9,11 @@ return [
     'about' => 'About',
     'contact' => 'Contact',
     'go_home' => 'Go Home Page',
+    'services' => 'Services',
+    'customers' => 'Customers',
+    'pricing' => 'Pricing',
+    'company' => 'Company',
+    'aboutus' => 'About Us',
+    'contactus' => 'Contact Us',
+    'getstarted' => 'Get Started',
 ];
