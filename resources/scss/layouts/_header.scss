@@ -14,7 +14,7 @@
   position: relative;
   font-size: 16px;
   font-weight: 500;
-  color: #010101;
+  color: var(--nav-link-color);
   transition: color 0.3s ease, transform 0.3s ease;
   width: fit-content;
 
@@ -52,7 +52,7 @@
 
   .dropdown-toggle {
     font-size: 16px;
-    color: #010101;
+    color: var(--nav-link-color);
     background: transparent;
     border: none;
     transition: all 0.3s ease;
@@ -83,7 +83,6 @@
 
         &:hover {
             background: #1BBB75;
-            color: #fff;
             transform: translateX(5px);
         }
     }
