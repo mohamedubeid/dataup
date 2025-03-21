@@ -1,0 +1,40 @@
+.newsletter-sec {
+  height: calc(100vh - 157px - 56px);
+  // background-color: red;
+  .gradient-text {
+    background: linear-gradient(90deg, #23BF7C 0%, #10593A 29.17%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    // font-weight: 700;
+  }
+  
+  .subtitle-style {
+    color: #000000B2;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 0%;
+  }
+
+  form{
+    max-width: 520px;
+    ::placeholder {
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 16px;
+    }
+    input {
+      background: #FFFFFF80;
+      color: #000;
+      border: none;
+      border-radius: 100px;
+      padding: 16px 32px;
+      width: 100%;
+      &:focus {
+        outline: none;
+        border: none;
+      }
+    }
+  }
+}
+
+
