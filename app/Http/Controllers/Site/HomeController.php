@@ -9,12 +9,12 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     public function index() {
-        $homeBlocks3 = HomeBlock::withTranslation(app()->getLocale())->first();
-
-        return view('site.home.index', compact('homeBlocks3'));
+        $homeBlocks = HomeBlock::withTranslation(app()->getLocale())->first();
+        return view('site.home.index', compact('homeBlocks'));
     }
 
     public function about() {
-        return view('site.home.about');
+        $homeBlocks = HomeBlock::withTranslation(app()->getLocale())->first();
+        return view('site.home.about', compact('homeBlocks'));
     }
 }

@@ -15,5 +15,11 @@ return [
     'aboutus' => 'من نحن',
     'contactus' => 'تواصل معنا',
     'getstarted' => 'أبدأ الأن',
-
+    'license' => 'الرخصة',
+    'terms_and_condtions' => 'الشروط والأحكام',
+    'footer_newsletter_desc' => '.يرجى تزويدنا بعنوان بريدك الإلكتروني، وسنحرص على التواصل معك في أقرب وقت ممكن',
+    'lets_chat' => 'لنتحدث!',
+    'submit' => 'إرسال',
+    'copy_right' => 'حقوق النشر © مقدمة بواسطة Aresto',
+    'email_placeholder' => 'أدخل ايميلك',
 ];

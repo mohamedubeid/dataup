@@ -11,7 +11,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 @section('content')
 
     <h1>{{ __('main.title') }}</h1>
-    <p>{{ $homeBlocks3->getTranslatedAttribute('title') }}</p>
+    <p>{{ $homeBlocks->getTranslatedAttribute('title') }}</p>
     <ul>
         @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
             <li>

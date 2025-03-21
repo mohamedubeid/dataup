@@ -1,0 +1,47 @@
+.footer-box-style {
+  padding: 45px 32px;
+  background: var(--footer-bg);
+  border-radius: 24px;
+}
+form{
+  ::placeholder {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 16px;
+  }
+  input {
+    background: #e2e2e2;
+    color: #000;
+    border: none;
+    border-radius: 100px;
+    padding: 16px 32px;
+    width: 100%;
+    &:focus {
+      outline: none;
+      border: none;
+    }
+  }
+}
+
+.lets-chat {
+  line-height: 32px;
+  letter-spacing: -0.2px;
+  text-transform: capitalize;
+}
+
+
+.social-icons-style a {
+  svg {
+    rect {
+      stroke: var(--text-color);
+    }
+    path {
+      fill: var(--text-color);
+    }
+  }
+}
+.link-style {
+  &:hover {
+    color: var(--primary-color);
+  }
+}

@@ -2,12 +2,12 @@
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 @endphp
 
-<header>
+<header class="mb-5">
   <div class="container">
     <div class="row flex-nowrap align-items-center justify-content-between mt-4 pt-2">
       <div class="col-auto">
-        <img id="logo-light" src="images/logo-light.svg" alt="dataup-light" width="173px" height="56px" class="logo-style"/>
-        <img id="logo-dark" src="images/logo-dark.svg" alt="dataup-dark" width="173px" height="56px" class="logo-style"/>
+        <img id="logo-light" src={{ asset("images/logo-light.svg") }} alt="dataup-light" width="173px" height="56px" class="logo-style"/>
+        <img id="logo-dark" src={{ asset("images/logo-dark.svg") }} alt="dataup-dark" width="173px" height="56px" class="logo-style"/>
       </div>
       <div class="col-auto">
         <div class="d-flex align-items-center justify-content-center gap-3">
