@@ -21,5 +21,9 @@ return [
     'footer_newsletter_desc' => 'Please provide your email address by submitting it, and we will make sure to contact you as soon as possible.',
     'lets_chat' => 'Let’s Chat!',
     'submit' => 'Submit',
-    'email_placeholder' => 'Enter Your Email'
+    'email_placeholder' => 'Enter Your Email',
+    'copy_right' => 'copyright @ powered by Aresto',
+    'required' => 'This email is already exist',
+    'news_succeed' => 'Your subscription has been successfully confirmed',
+    'error' => 'Unxpected error occurred!, Please try again later'
 ];

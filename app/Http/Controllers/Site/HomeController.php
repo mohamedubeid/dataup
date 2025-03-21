@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
 use App\Models\HomeBlock;
+use App\Models\Newsletter;
 use Illuminate\Http\Request;
+use Illuminate\Validation\ValidationException;
 
 class HomeController extends Controller
 {
@@ -17,4 +19,20 @@ class HomeController extends Controller
         $homeBlocks = HomeBlock::withTranslation(app()->getLocale())->first();
         return view('site.home.about', compact('homeBlocks'));
     }
+
+    public function subscribe(Request $request) {
+		try {
+			$validated = $request->validate([
+				'email' => 'required|email|unique:newsletters,email',
+			], [
+					'unique' => __('main.required'),
+			]);
+			Newsletter::create([
+					'email' => $validated['email'],
+			]);
+			return response()->json(['success' => __('main.news_succeed')]);
+		} catch (ValidationException $e) {
+			return response()->json(['errors' => $e->errors()], 422);
+		}
+	}
 }

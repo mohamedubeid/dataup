@@ -52,11 +52,13 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
           <h3 class="fw-normal fs-2 mb-3">{{ __('main.lets_chat')}}</h3>
           <p class="lets-chat">{{ __('main.footer_newsletter_desc')}}</p>
           <div class="mt-4">
-            <form method="POST" action="javascript:void(0)" id="newsletterForm" dir="rtl">
+            <form method="POST" action="javascript:void(0)" id="newsletterForm">
+              @csrf
               <div class="d-flex flex-column flex-sm-row gap-2 gap-md-1">
-                <input type="email" placeholder="{{ __('main.email_placeholder')}}" aria-label="email" required class="{{ LaravelLocalization::getCurrentLocale() == 'en' ? 'text-end' : 'text-start' }}" />
+                <input name="email" type="email" placeholder="{{ __('main.email_placeholder')}}" aria-label="email" required class="{{ LaravelLocalization::getCurrentLocale() == 'en' ? 'text-end' : 'text-start' }}" />
                 <button class="footer-btn">{{ __('main.submit')}}</button>
               </div>
+              <div id="formResponse" class="w-100"></div>
             </form>
           </div>
         </div>
@@ -66,3 +68,55 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
     </div>
   </div>
 </footer>
+
+<script>
+  document.getElementById('newsletterForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+  
+      const form = event.target;
+      const formData = new FormData(form);
+      const csrfToken = form.querySelector('input[name="_token"]').value;
+  
+      fetch('{{ route('newsletter.subscribe') }}', {
+          method: 'POST',
+          headers: {
+              'X-CSRF-TOKEN': csrfToken,
+              'Accept': 'application/json',
+          },
+          body: formData,
+      })
+      .then(response => {
+          if (!response.ok) {
+              throw response;
+          }
+          return response.json();
+      })
+      .then(data => {
+          let message = '';
+          if (data.success) {
+            message = `<h6 class="pt-2 fs-6 text-success">${data.success}</h6>`;
+          }
+          document.getElementById('formResponse').innerHTML = message;
+          setTimeout(() => {
+              document.getElementById('formResponse').innerHTML = '';
+          }, 10000);
+      })
+      .catch(async (errorResponse) => {
+          let message = '<div>';
+          if (errorResponse.status === 422) {
+              const errorData = await errorResponse.json();
+              for (let error in errorData.errors) {
+                  message += '<h6 class="pt-2 text-danger">' + errorData.errors[error] + '</h6>';
+              }
+          } else {
+            message += '<h6 class="sml-font pt-2 text-danger">{{ __('main.error') }}</h6>';
+          }
+          message += '</div>';
+          document.getElementById('formResponse').innerHTML = message;
+
+          setTimeout(() => {
+              document.getElementById('formResponse').innerHTML = '';
+          }, 10000);
+      });
+  });
+  </script>
