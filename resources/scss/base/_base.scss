@@ -68,3 +68,18 @@ p {
     transform: scale(1.1);
   }
 }
+
+.gradient-text {
+  background: linear-gradient(90deg, #23BF7C 0%, #000000 22.7%, #49BDDD 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.primary-color {
+  color: var(--primary-color);
+  padding-top: 8px;
+}
+
+.line-height-32, p {
+  line-height: 32px;
+}

@@ -6,11 +6,6 @@
     h1 {
       font-weight: 500px;
     }
-    .gradient-text {
-      background: linear-gradient(90deg, #23BF7C 0%, #10593A 29.17%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
     .subtitle-style {
       color: var(--hero-subtitle);
       font-size: 20px;
@@ -60,12 +55,6 @@
       color: var(--subtitle);
       font-size: 14px;
     }
-    .primary-color {
-      color: var(--primary-color);
-      padding-top: 8px;
-      display: inline-block;
-      white-space: nowrap;
-    }
     h2 {
       font-size: 37px;
       font-weight: 600;
@@ -76,6 +65,11 @@
     .color-balck {
       color: var(--text-color)
     }
+    .cstm-font {
+      @media (max-width: 768px) {
+        font-size: 24px !important;
+      }
+    }
   }
 }
 
@@ -83,4 +77,32 @@
   unicode-bidi: plaintext;
   direction: rtl;
   text-align: right;
+}
+
+.about-dataup-section {
+  margin-top: 170px;
+
+  .about-subtitle {
+    font-weight: 700;
+    font-style: italic;
+    font-size: 16px;
+
+  }
+}
+
+.our-services-section {
+  margin-top: 170px;
+  h2 {
+    line-height: 40px;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+  }
+  .cstm-color {
+    color: #000000B2;
+  }
+}
+.home-img {
+  max-width: 574px;
+  width: 100%;
+  max-height: 432px;
 }

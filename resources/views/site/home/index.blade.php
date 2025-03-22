@@ -46,41 +46,74 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
             </div>
         </div>
         <div class="why-choose-us-style">
-                    <div class="container">
-                        <div class="row  align-items-center justify-content-sm-between gap-3 gap-md-0">
-                            <div class="col-5 col-md-3">
-                                <div class="d-flex align-items-start  gap-2">
-                                    <img src="{{ asset('images/quality.svg')}}" alt='quality'/>
-                                    <div>
-                                        <h5>{{ __('main.quality')}}</h5>
-                                        <p class="sub-title">{{ __('main.expert')}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-5 col-md-3">
-                                <div class="d-flex align-items-start  gap-2">
-                                    <img src="{{ asset('images/efficiency.svg')}}" alt='scalability'/>
-                                    <div>
-                                        <h5>{{ __('main.efficiency')}}</h5>
-                                        <p class="sub-title">{{ __('main.quick_turnaround')}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-5 col-md-3">
-                                <div class="d-flex align-items-start  gap-2">
-                                    <img src="{{ asset('images/scalability.svg')}}" alt='scalability'/>
-                                    <div>
-                                        <h5>{{ __('main.scalability')}}</h5>
-                                        <p class="sub-title">{{ __('main.slexible_solutions')}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-5 col-md-3 ">
-                                <h2>{{ __('main.why_choose')}}</h2> 
-                                <h2 class="primary-color fix-question-mark">DataUp<span class="color-balck">?</span></h2>
+            <div class="container">
+                <div class="row  align-items-center justify-content-sm-between gap-3 gap-md-0">
+                    <div class="col-5 col-md-3">
+                        <div class="d-flex align-items-start  gap-2">
+                            <img src="{{ asset('images/quality.svg')}}" alt='quality'/>
+                            <div>
+                                <h5>{{ __('main.quality')}}</h5>
+                                <p class="sub-title">{{ __('main.expert')}}</p>
                             </div>
                         </div>
                     </div>
+                    <div class="col-5 col-md-3">
+                        <div class="d-flex align-items-start  gap-2">
+                            <img src="{{ asset('images/efficiency.svg')}}" alt='scalability'/>
+                            <div>
+                                <h5>{{ __('main.efficiency')}}</h5>
+                                <p class="sub-title">{{ __('main.quick_turnaround')}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-5 col-md-3">
+                        <div class="d-flex align-items-start  gap-2">
+                            <img src="{{ asset('images/scalability.svg')}}" alt='scalability'/>
+                            <div>
+                                <h5>{{ __('main.scalability')}}</h5>
+                                <p class="sub-title">{{ __('main.slexible_solutions')}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-5 col-md-3 ">
+                        <h2 class="cstm-font">{{ __('main.why_choose')}}</h2> 
+                        <h2 class="primary-color fix-question-mark cstm-font">DataUp<span class="cstm-font color-balck">?</span></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-dataup-section">
+        <div class="container">
+            <div class="row justify-content-between row-gap-5">
+                <div class="col-12 col-lg-5">
+                    <img src="{{ asset($homeBlocks->getTranslatedAttribute('imageLink')) }}" alt="about-dataup" class="home-img"/>
+                </div>
+                <div class="col-12 col-lg-5">
+                    <h2 class="mb-3">About <span class="primary-color">DataUp</span> – The Database Engine</h2>
+                    <p class="about-subtitle gradient-text">Empowering AI with High-Quality Data</p>
+                    {{-- <p>{{ $homeBlocks->getTranslatedAttribute('sub_title') }}</p> --}}
+                    <div class="mt-3 mb-4 pb-2 fs-5 line-height-32">{!! $homeBlocks->getTranslatedAttribute('overview') !!}</div>
+                    <button class="cstm-btn">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="our-services-section">
+        <div class="container">
+            <div class="row justify-content-between row-gap-5">
+                <div class="col-12 col-lg-6 p-0">
+                    <p class="gradient-text">Our Services</p>
+                    <h2 class="mb-4">We offer expert <span class="primary-color">data processing solutions</span> tailored to AI and machine learning needs.</h2>
+                    <div class="mb-4 pb-2 fs-5 line-height-32 cstm-color">{!! $homeBlocks->getTranslatedAttribute('services_overview') !!}</div>
+                    <button class="cstm-btn">Learn More</button>
+                </div>
+                <div class="col-12 col-lg-5 p-0">
+                    <img src="{{ asset($homeBlocks->getTranslatedAttribute('serviceImageLink')) }}" alt="about-dataup" class="home-img"/>
+                </div>
+            </div>
         </div>
     </section>
 @endsection

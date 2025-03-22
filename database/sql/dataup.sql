@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 14, 2025 at 10:59 AM
+-- Generation Time: Mar 22, 2025 at 01:41 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -185,18 +185,18 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (68, 8, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 8),
 (69, 8, 'deleted_at', 'timestamp', 'Deleted At', 0, 0, 0, 0, 0, 0, '{}', 9),
 (70, 9, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
-(71, 9, 'title', 'text', 'Title', 0, 1, 1, 1, 1, 1, '{}', 2),
-(73, 9, 'overview', 'rich_text_box', 'Overview', 0, 1, 1, 1, 1, 1, '{}', 4),
-(74, 9, 'image', 'image', 'Image', 0, 1, 1, 1, 1, 1, '{}', 5),
-(75, 9, 'image_alt_tag', 'text', 'Image Alt Tag', 0, 1, 1, 1, 1, 1, '{}', 6),
-(76, 9, 'created_at', 'timestamp', 'Created At', 0, 0, 0, 0, 0, 0, '{}', 13),
-(77, 9, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 14),
-(78, 9, 'deleted_at', 'timestamp', 'Deleted At', 0, 0, 0, 0, 0, 0, '{}', 15),
-(79, 9, 'whatsapp', 'text', 'WhatsApp Number', 0, 1, 1, 1, 1, 1, '{}', 8),
-(80, 9, 'gmail', 'text', 'Gmail', 0, 1, 1, 1, 1, 1, '{}', 9),
-(81, 9, 'linkedin', 'text', 'Linkedin Link', 0, 1, 1, 1, 1, 1, '{}', 10),
-(82, 9, 'instagram', 'text', 'Instagram Link', 0, 1, 1, 1, 1, 1, '{}', 11),
-(83, 9, 'facebook', 'text', 'Facebook Link', 0, 1, 1, 1, 1, 1, '{}', 12),
+(71, 9, 'title', 'text', 'About Title', 0, 1, 1, 1, 1, 1, '{}', 2),
+(73, 9, 'overview', 'rich_text_box', 'About Overview', 0, 1, 1, 1, 1, 1, '{}', 4),
+(74, 9, 'image', 'image', 'About Image', 0, 1, 1, 1, 1, 1, '{}', 5),
+(75, 9, 'image_alt_tag', 'text', 'About Image Alt Tag', 0, 1, 1, 1, 1, 1, '{}', 6),
+(76, 9, 'created_at', 'timestamp', 'Created At', 0, 0, 0, 0, 0, 0, '{}', 17),
+(77, 9, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 18),
+(78, 9, 'deleted_at', 'timestamp', 'Deleted At', 0, 0, 0, 0, 0, 0, '{}', 19),
+(79, 9, 'whatsapp', 'text', 'WhatsApp Number', 0, 1, 1, 1, 1, 1, '{}', 12),
+(80, 9, 'gmail', 'text', 'Gmail', 0, 1, 1, 1, 1, 1, '{}', 13),
+(81, 9, 'linkedin', 'text', 'Linkedin Link', 0, 1, 1, 1, 1, 1, '{}', 14),
+(82, 9, 'instagram', 'text', 'Instagram Link', 0, 1, 1, 1, 1, 1, '{}', 15),
+(83, 9, 'facebook', 'text', 'Facebook Link', 0, 1, 1, 1, 1, 1, '{}', 16),
 (84, 10, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
 (85, 10, 'email', 'text', 'Email', 0, 1, 1, 1, 1, 1, '{}', 2),
 (86, 10, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 0, 0, 0, '{}', 3),
@@ -212,8 +212,12 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (96, 11, 'updated_at', 'timestamp', 'Updated At', 0, 0, 1, 0, 0, 0, '{}', 9),
 (97, 11, 'deleted_at', 'timestamp', 'Deleted At', 0, 0, 0, 0, 0, 0, '{}', 10),
 (98, 11, 'slug', 'text', 'Slug', 0, 1, 1, 1, 1, 1, '{\"validation\":{\"rule\":\"required|unique:services,slug\",\"messages\":{\"required\":\"Please enter the identifier\",\"unique\":\"This identifier is already used\"}},\"slugify\":{\"origin\":\"title\"}}', 3),
-(99, 9, 'sub_title', 'rich_text_box', 'Sub Title', 0, 1, 1, 1, 1, 1, '{}', 3),
-(100, 9, 'footer_dsc', 'rich_text_box', 'Footer Description', 0, 1, 1, 1, 1, 1, '{}', 7);
+(99, 9, 'sub_title', 'text', 'About Sub Title', 0, 1, 1, 1, 1, 1, '{}', 3),
+(100, 9, 'footer_dsc', 'rich_text_box', 'Footer Description', 0, 1, 1, 1, 1, 1, '{}', 11),
+(101, 9, 'services_title', 'text', 'Services Title', 0, 1, 1, 1, 1, 1, '{}', 7),
+(102, 9, 'services_overview', 'rich_text_box', 'Services Overview', 0, 1, 1, 1, 1, 1, '{}', 8),
+(103, 9, 'services_image', 'image', 'Services Image', 0, 1, 1, 1, 1, 1, '{}', 9),
+(104, 9, 'services_image_alt_tag', 'text', 'Services Image Alt Tag', 0, 1, 1, 1, 1, 1, '{}', 10);
 
 -- --------------------------------------------------------
 
@@ -252,7 +256,7 @@ INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `displa
 (6, 'about_blocks', 'about-blocks', 'About Block', 'About Blocks', 'voyager-star-two', 'App\\Models\\AboutBlock', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2025-03-09 13:14:47', '2025-03-09 13:15:58'),
 (7, 'clients', 'clients', 'Client', 'Clients', 'voyager-people', 'App\\Models\\Client', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2025-03-09 13:22:03', '2025-03-14 07:40:54'),
 (8, 'contacts', 'contacts', 'Contact', 'Contacts', 'voyager-paper-plane', 'App\\Models\\Contact', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2025-03-09 13:23:48', '2025-03-09 13:23:48'),
-(9, 'home_blocks', 'home-blocks', 'Home Block', 'Home Blocks', 'voyager-home', 'App\\Models\\HomeBlock', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2025-03-09 13:25:52', '2025-03-14 07:58:23'),
+(9, 'home_blocks', 'home-blocks', 'Home Block', 'Home Blocks', 'voyager-home', 'App\\Models\\HomeBlock', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2025-03-09 13:25:52', '2025-03-22 10:36:08'),
 (10, 'newsletters', 'newsletters', 'Newsletter', 'Newsletters', 'voyager-mail', 'App\\Models\\Newsletter', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2025-03-09 13:26:52', '2025-03-09 13:26:52'),
 (11, 'services', 'services', 'Service', 'Services', 'voyager-laptop', 'App\\Models\\Service', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2025-03-09 13:28:39', '2025-03-14 07:41:13');
 
@@ -308,15 +312,19 @@ CREATE TABLE `home_blocks` (
   `linkedin` varchar(255) DEFAULT NULL,
   `instagram` varchar(255) DEFAULT NULL,
   `facebook` varchar(255) DEFAULT NULL,
-  `footer_dsc` text DEFAULT NULL
+  `footer_dsc` text DEFAULT NULL,
+  `services_title` varchar(255) DEFAULT NULL,
+  `services_overview` text DEFAULT NULL,
+  `services_image` text DEFAULT NULL,
+  `services_image_alt_tag` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `home_blocks`
 --
 
-INSERT INTO `home_blocks` (`id`, `title`, `sub_title`, `overview`, `image`, `image_alt_tag`, `created_at`, `updated_at`, `deleted_at`, `whatsapp`, `gmail`, `linkedin`, `instagram`, `facebook`, `footer_dsc`) VALUES
-(1, 'About DataUp – The Database Engine', '<p>Empowering AI with High-Quality Data</p>', '<p>At DataUp, we specialize in data annotation and curation services, helping businesses and AI-driven companies build high-quality datasets for machine learning and artificial intelligence. Our goal is to streamline the data preparation process, ensuring accuracy, efficiency, and scalability for AI models.</p>', NULL, NULL, NULL, '2025-03-14 07:59:16', NULL, NULL, NULL, NULL, NULL, NULL, '<p>Dobase &ndash; an open source database engine built for performance and scalability. Free to use and powered by Java and the best open source libraries. &copy; 2025 Dobase</p>');
+INSERT INTO `home_blocks` (`id`, `title`, `sub_title`, `overview`, `image`, `image_alt_tag`, `created_at`, `updated_at`, `deleted_at`, `whatsapp`, `gmail`, `linkedin`, `instagram`, `facebook`, `footer_dsc`, `services_title`, `services_overview`, `services_image`, `services_image_alt_tag`) VALUES
+(1, 'About DataUp – The Database Engine', '<p>Empowering AI with High-Quality Data</p>', '<p>At DataUp, we specialize in data annotation and curation services, helping businesses and AI-driven companies build high-quality datasets for machine learning and artificial intelligence. Our goal is to streamline the data preparation process, ensuring accuracy, efficiency, and scalability for AI models.</p>', NULL, NULL, NULL, '2025-03-22 10:41:19', NULL, NULL, NULL, NULL, NULL, NULL, '<p>Dobase &ndash; an open source database engine built for performance and scalability. Free to use and powered by Java and the best open source libraries. &copy; 2025 Dobase</p>', 'نقدم حلول معالجة بيانات متخصصة مصممة وفقًا لاحتياجات الذكاء الاصطناعي والتعلم الآلي.  تضمن خدمتنا لوضع العلامات بيانات موسومة عالية الجودة لتدريب الذكاء الاصطناعي', '<p class=\"\" data-start=\"502\" data-end=\"535\"><strong data-start=\"502\" data-end=\"533\">أنواع العلامات التي نقدمها:</strong></p>\r\n<ul data-start=\"536\" data-end=\"645\" data-is-last-node=\"\" data-is-only-node=\"\">\r\n<li class=\"\" data-start=\"536\" data-end=\"556\">\r\n<p class=\"\" data-start=\"538\" data-end=\"556\">وضع علامات الصور</p>\r\n</li>\r\n<li class=\"\" data-start=\"557\" data-end=\"578\">\r\n<p class=\"\" data-start=\"559\" data-end=\"578\">وضع علامات النصوص</p>\r\n</li>\r\n<li class=\"\" data-start=\"579\" data-end=\"601\">\r\n<p class=\"\" data-start=\"581\" data-end=\"601\">وضع علامات الفيديو</p>\r\n</li>\r\n<li class=\"\" data-start=\"602\" data-end=\"645\">\r\n<p class=\"\" data-start=\"604\" data-end=\"645\">وضع علامات السحابة النقطية ثلاثية الأبعاد</p>\r\n</li>\r\n</ul>', 'home-blocks\\March2025\\1SXDniFxCJPvnKpiV6sz.png', 'Services Image Alt Tag');
 
 -- --------------------------------------------------------
 
@@ -835,7 +843,12 @@ INSERT INTO `translations` (`id`, `table_name`, `column_name`, `foreign_key`, `l
 (67, 'home_blocks', 'sub_title', 1, 'ar', '<p>تمكين الذكاء الاصطناعي بالبيانات عالية الجودة</p>', '2025-03-14 07:46:57', '2025-03-14 07:46:57'),
 (68, 'home_blocks', 'overview', 1, 'ar', '<p data-pm-slice=\"0 0 []\">في داتا اب، نختص في خدمات تصنيف البيانات وتنقيحها، مما يساعد الشركات والمؤسسات المعتمدة على الذكاء الاصطناعي في بناء مجموعات بيانات عالية الجودة للتعلم الآلي والذكاء الاصطناعي. هدفنا هو تبسيط عملية إعداد البيانات، وضمان الدقة والكفاءة والقابلية للتوسع لنماذج الذكاء الاصطناعي.</p>', '2025-03-14 07:46:57', '2025-03-14 07:46:57'),
 (69, 'data_rows', 'display_name', 99, 'ar', 'Sub Title', '2025-03-14 07:58:23', '2025-03-14 07:58:23'),
-(70, 'home_blocks', 'footer_dsc', 1, 'ar', '<p><strong data-start=\"0\" data-end=\"10\" data-is-only-node=\"\">Dobase</strong> &ndash; محرك قاعدة بيانات مفتوح المصدر مبني للأداء والقابلية للتوسع. مجاني للاستخدام ومدعوم بلغة جافا وأفضل المكتبات المفتوحة المصدر. &copy; 2025 Dobase</p>', '2025-03-14 07:59:16', '2025-03-14 07:59:16');
+(70, 'home_blocks', 'footer_dsc', 1, 'ar', '<p><strong data-start=\"0\" data-end=\"10\" data-is-only-node=\"\">Dobase</strong> &ndash; محرك قاعدة بيانات مفتوح المصدر مبني للأداء والقابلية للتوسع. مجاني للاستخدام ومدعوم بلغة جافا وأفضل المكتبات المفتوحة المصدر. &copy; 2025 Dobase</p>', '2025-03-14 07:59:16', '2025-03-14 07:59:16'),
+(71, 'data_rows', 'display_name', 100, 'ar', 'Footer Description', '2025-03-22 10:19:11', '2025-03-22 10:19:11'),
+(72, 'data_rows', 'display_name', 101, 'ar', 'Services Title', '2025-03-22 10:31:13', '2025-03-22 10:31:13'),
+(73, 'data_rows', 'display_name', 102, 'ar', 'Services Overview', '2025-03-22 10:31:13', '2025-03-22 10:31:13'),
+(74, 'data_rows', 'display_name', 103, 'ar', 'Services Image', '2025-03-22 10:31:13', '2025-03-22 10:31:13'),
+(75, 'data_rows', 'display_name', 104, 'ar', 'Services Image Alt Tag', '2025-03-22 10:31:13', '2025-03-22 10:31:13');
 
 -- --------------------------------------------------------
 
@@ -1067,7 +1080,7 @@ ALTER TABLE `contacts`
 -- AUTO_INCREMENT for table `data_rows`
 --
 ALTER TABLE `data_rows`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=105;
 
 --
 -- AUTO_INCREMENT for table `data_types`
@@ -1163,7 +1176,7 @@ ALTER TABLE `settings`
 -- AUTO_INCREMENT for table `translations`
 --
 ALTER TABLE `translations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
 
 --
 -- AUTO_INCREMENT for table `users`

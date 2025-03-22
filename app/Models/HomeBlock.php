@@ -9,11 +9,19 @@ class HomeBlock extends Model
 {
   use Translatable;
   protected $translatable = ['title', 'sub_title', 'overview', 'footer_dsc'];
-  protected $appends = ['imageLink'];
+  protected $appends = ['imageLink', 'serviceImageLink'];
 
   public function getImageLinkAttribute() {
     if($this->image) {
         return str_replace('\\', '/', asset('storage/' . $this->image));
+    } else {
+        return null;
+    }
+  }
+
+  public function getServiceImageLinkAttribute() {
+    if($this->services_image) {
+        return str_replace('\\', '/', asset('storage/' . $this->services_image));
     } else {
         return null;
     }
