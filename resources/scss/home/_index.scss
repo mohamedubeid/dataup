@@ -1,40 +1,86 @@
-.newsletter-sec {
-  height: calc(100vh - 157px - 56px);
-  // background-color: red;
-  .gradient-text {
-    background: linear-gradient(90deg, #23BF7C 0%, #10593A 29.17%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    // font-weight: 700;
-  }
-  
-  .subtitle-style {
-    color: #000000B2;
-    font-size: 20px;
-    line-height: 32px;
-    letter-spacing: 0%;
-  }
-
-  form{
-    max-width: 520px;
-    ::placeholder {
-      font-size: 17px;
-      font-weight: 400;
-      line-height: 16px;
+.hero-section {
+  .newsletter-box {
+    height: 45vh;
+    margin-bottom: 100px;
+    text-align: center;
+    h1 {
+      font-weight: 500px;
     }
-    input {
-      background: #FFFFFF80;
-      color: #000;
-      border: none;
-      border-radius: 100px;
-      padding: 16px 32px;
+    .gradient-text {
+      background: linear-gradient(90deg, #23BF7C 0%, #10593A 29.17%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .subtitle-style {
+      color: var(--hero-subtitle);
+      font-size: 20px;
+      line-height: 32px;
+      letter-spacing: 0%;
+      max-width: 800px;
+      text-align: center;
+      padding-bottom: 8px;
+    }
+    form{
+      max-width: 520px;
       width: 100%;
-      &:focus {
-        outline: none;
-        border: none;
+      ::placeholder {
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 16px;
+        opacity: 0.5;
+        color: var(--text-color);
       }
+      input {
+        background: var(--hero-input-background) !important;
+        border: none;
+        border-radius: 100px;
+        padding: 16px 32px;
+        width: 100%;
+        color: var(--text-color);
+        &:focus {
+          outline: none;
+          border: none;
+        }
+      }
+    }
+    .to-next-sec-btn-style {
+      background-color: transparent;
+      border: none;
+      svg {
+        path {
+          fill: var(--text-color)
+        }
+      }
+    }
+  }
+  .why-choose-us-style {
+    background: var(--why-choose-us-background);
+    padding: 18px 0 26px 0;
+    .sub-title {
+      color: var(--subtitle);
+      font-size: 14px;
+    }
+    .primary-color {
+      color: var(--primary-color);
+      padding-top: 8px;
+      display: inline-block;
+      white-space: nowrap;
+    }
+    h2 {
+      font-size: 37px;
+      font-weight: 600;
+      line-height: 100%;
+      letter-spacing: 0%;
+      white-space: nowrap;
+    }
+    .color-balck {
+      color: var(--text-color)
     }
   }
 }
 
-
+[dir="rtl"] .fix-question-mark {
+  unicode-bidi: plaintext;
+  direction: rtl;
+  text-align: right;
+}

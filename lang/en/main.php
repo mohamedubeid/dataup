@@ -2,7 +2,9 @@
 
 return [
 
-    'title' => 'Transforming Data into Insights with Precision.',
+    'transform' => 'Transforming',
+    'hero_title' => 'Data into Insights with Precision',
+    'hero_subtitle' => 'We provide high-quality data annotation and curation services to help you build better AI models',
     'home' => 'Home',
     'page_not_found' => 'Page Not Found',
     'about_us' => 'About Us',
@@ -25,5 +27,12 @@ return [
     'copy_right' => 'copyright @ powered by Aresto',
     'required' => 'This email is already exist',
     'news_succeed' => 'Your subscription has been successfully confirmed',
-    'error' => 'Unxpected error occurred!, Please try again later'
+    'error' => 'Unxpected error occurred!, Please try again later',
+    'quality' => 'Quality & Accuracy',
+    'expert' => 'Expert data labeling and curation',
+    'efficiency' => 'Efficiency ',
+    'quick_turnaround' => 'Quick turnaround times without compromising quality',
+    'scalability' => 'Scalability ',
+    'slexible_solutions' => 'Flexible solutions tailored to your needs',
+    'why_choose' => 'Why Choose',
 ];

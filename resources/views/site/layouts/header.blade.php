@@ -2,7 +2,7 @@
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 @endphp
 
-<header class="mb-5">
+<header class="mb-5 pb-4">
   <div class="container">
     <div class="row flex-nowrap align-items-center justify-content-between mt-4 pt-2">
       <div class="col-auto">

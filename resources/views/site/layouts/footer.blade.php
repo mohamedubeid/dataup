@@ -52,13 +52,13 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
           <h3 class="fw-normal fs-2 mb-3">{{ __('main.lets_chat')}}</h3>
           <p class="lets-chat">{{ __('main.footer_newsletter_desc')}}</p>
           <div class="mt-4">
-            <form method="POST" action="javascript:void(0)" id="newsletterForm">
+            <form method="POST" action="javascript:void(0)" id="newsletterFormFooter">
               @csrf
               <div class="d-flex flex-column flex-sm-row gap-2 gap-md-1">
                 <input name="email" type="email" placeholder="{{ __('main.email_placeholder')}}" aria-label="email" required class="{{ LaravelLocalization::getCurrentLocale() == 'en' ? 'text-end' : 'text-start' }}" />
                 <button class="footer-btn">{{ __('main.submit')}}</button>
               </div>
-              <div id="formResponse" class="w-100"></div>
+              <div id="formResponseFooter" class="w-100"></div>
             </form>
           </div>
         </div>
@@ -70,7 +70,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 </footer>
 
 <script>
-  document.getElementById('newsletterForm').addEventListener('submit', function(event) {
+  document.getElementById('newsletterFormFooter').addEventListener('submit', function(event) {
       event.preventDefault();
   
       const form = event.target;
@@ -96,9 +96,9 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
           if (data.success) {
             message = `<h6 class="pt-2 fs-6 text-success">${data.success}</h6>`;
           }
-          document.getElementById('formResponse').innerHTML = message;
+          document.getElementById('formResponseFooter').innerHTML = message;
           setTimeout(() => {
-              document.getElementById('formResponse').innerHTML = '';
+              document.getElementById('formResponseFooter').innerHTML = '';
           }, 10000);
       })
       .catch(async (errorResponse) => {
@@ -112,10 +112,10 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
             message += '<h6 class="sml-font pt-2 text-danger">{{ __('main.error') }}</h6>';
           }
           message += '</div>';
-          document.getElementById('formResponse').innerHTML = message;
+          document.getElementById('formResponseFooter').innerHTML = message;
 
           setTimeout(() => {
-              document.getElementById('formResponse').innerHTML = '';
+              document.getElementById('formResponseFooter').innerHTML = '';
           }, 10000);
       });
   });

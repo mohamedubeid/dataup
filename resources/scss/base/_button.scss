@@ -20,15 +20,24 @@
   @extend .cstm-btn;
   box-shadow: 0px 0px 44px 0px #23BF7C4D;
   background: #141414;
-  height: 56px;
+  padding: 12px 32px;
   font-size: 18px;
   letter-spacing: 0%;
   position: absolute;
-  right:0px;
-  top: 0px;
+  right:2px;
+  top: 2px;
   &:hover {
     background: #000000;
   }
+  [dir="rtl"] & {
+    right: auto;
+    left: 2px;
+    top: auto;
+    bottom: 2px;
+  }
+}
+[data-theme="dark"] .hero-btn {
+  color: #fff;
 }
 
 .choose-plan-sec-btn {
