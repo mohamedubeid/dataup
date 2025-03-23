@@ -6,6 +6,11 @@
     h1 {
       font-weight: 500px;
     }
+    .gradient-text {
+      background: linear-gradient(90deg, #23BF7C 0%, #10593A 29.17%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
     .subtitle-style {
       color: var(--hero-subtitle);
       font-size: 20px;
@@ -98,7 +103,7 @@
     text-transform: capitalize;
   }
   .cstm-color {
-    color: #000000B2;
+    color: var(--hero-subtitle);
   }
 }
 .home-img {

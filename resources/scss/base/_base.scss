@@ -70,7 +70,7 @@ p {
 }
 
 .gradient-text {
-  background: linear-gradient(90deg, #23BF7C 0%, #000000 22.7%, #49BDDD 50%);
+  background: var(--linear-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

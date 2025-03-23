@@ -8,7 +8,7 @@ use TCG\Voyager\Traits\Translatable;
 class HomeBlock extends Model
 {
   use Translatable;
-  protected $translatable = ['title', 'sub_title', 'overview', 'footer_dsc'];
+  protected $translatable = ['title', 'sub_title', 'overview', 'footer_dsc', 'services_title', 'services_overview', ];
   protected $appends = ['imageLink', 'serviceImageLink'];
 
   public function getImageLinkAttribute() {

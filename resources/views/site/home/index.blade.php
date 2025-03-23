@@ -26,7 +26,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
         <div class="container">
             <div class="newsletter-box">
                 <div class="d-flex flex-column gap-4 align-items-center justify-content-center h-100">
-                    <h1><span class="gradient-text">{{ __('main.transform') }}</span>{{ __('main.hero_title') }}</h1>
+                    <h1><span class="gradient-text">{{ __('main.transform') }} </span>{{ __('main.hero_title') }}</h1>
                     <p class="subtitle-style">{{ __('main.hero_subtitle') }}</p>
                     <form method="POST" action="javascript:void(0)" id="newsletterFormHero">
                         @csrf
@@ -91,11 +91,14 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
                     <img src="{{ asset($homeBlocks->getTranslatedAttribute('imageLink')) }}" alt="about-dataup" class="home-img"/>
                 </div>
                 <div class="col-12 col-lg-5">
-                    <h2 class="mb-3">About <span class="primary-color">DataUp</span> – The Database Engine</h2>
-                    <p class="about-subtitle gradient-text">Empowering AI with High-Quality Data</p>
-                    {{-- <p>{{ $homeBlocks->getTranslatedAttribute('sub_title') }}</p> --}}
+                    @if(LaravelLocalization::getCurrentLocale() == 'en')
+                        <h2 class="mb-3">About <span class="primary-color">DataUp</span> – The Database Engine</h2>
+                    @else
+                        <h2 class="mb-3">عن <span class="primary-color">DataUp</span> – محرك قاعدة البيانات</h2>
+                    @endif
+                    <p class="about-subtitle gradient-text">{{ $homeBlocks->getTranslatedAttribute('sub_title') }}</p>
                     <div class="mt-3 mb-4 pb-2 fs-5 line-height-32">{!! $homeBlocks->getTranslatedAttribute('overview') !!}</div>
-                    <button class="cstm-btn">Learn More</button>
+                    <button class="cstm-btn2">Learn More</button>
                 </div>
             </div>
         </div>
@@ -104,13 +107,17 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
     <section class="our-services-section">
         <div class="container">
             <div class="row justify-content-between row-gap-5">
-                <div class="col-12 col-lg-6 p-0">
+                <div class="col-12 col-lg-6">
                     <p class="gradient-text">Our Services</p>
-                    <h2 class="mb-4">We offer expert <span class="primary-color">data processing solutions</span> tailored to AI and machine learning needs.</h2>
+                    @if(LaravelLocalization::getCurrentLocale() == 'en')
+                        <h2 class="mb-4">We offer expert <span class="primary-color">data processing solutions</span> tailored to AI and machine learning needs</h2>
+                    @else
+                        <h2 class="mb-4">نقدم <span class="primary-color">حلول معالجة بيانات متخصصة</span>مصممة وفقًا لاحتياجات الذكاء الاصطناعي والتعلم الآلي</h2>
+                    @endif
                     <div class="mb-4 pb-2 fs-5 line-height-32 cstm-color">{!! $homeBlocks->getTranslatedAttribute('services_overview') !!}</div>
-                    <button class="cstm-btn">Learn More</button>
+                    <button class="cstm-btn2">Learn More</button>
                 </div>
-                <div class="col-12 col-lg-5 p-0">
+                <div class="col-12 col-lg-5">
                     <img src="{{ asset($homeBlocks->getTranslatedAttribute('serviceImageLink')) }}" alt="about-dataup" class="home-img"/>
                 </div>
             </div>
