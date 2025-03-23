@@ -43,5 +43,7 @@ return [
     'our_services' => 'Our Services',
     'our_clients' => 'Our Clients',
     'tuf' => 'Trust Us for Reliable Data Solutions',
-    'show_all' => 'Show All'
+    'show_all' => 'Show All',
+    'flexible' => 'Flexible',
+    'ppf' => 'Pricing Plans for Your Needs'
 ];

@@ -126,6 +126,19 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
             </div>
         </div>
     </section>
+
+    <section class="our-plans-section">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between gap-5 mb-4">
+                <h2><span class="primary-color">{{ __('main.flexible')}}</span> {{ __('main.ppf')}}</h2>
+                <a href="#"><p class="fw-medium text-link text-nowrap">{{ __('main.learn_more')}}</p></a>
+            </div>
+
+            <div class="plans">
+asdf
+            </div>
+        </div>
+    </section>
 @endsection
 
 <script>
