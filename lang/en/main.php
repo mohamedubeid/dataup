@@ -41,4 +41,7 @@ return [
     'dps' => 'data processing solutions',
     'tta' => 'tailored to AI and machine learning needs',
     'our_services' => 'Our Services',
+    'our_clients' => 'Our Clients',
+    'tuf' => 'Trust Us for Reliable Data Solutions',
+    'show_all' => 'Show All'
 ];

@@ -8,20 +8,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 @section('desc', "We provide high-quality data annotation and curation services to help you build better AI models.")
 
 @section('content')
-
-    {{-- <h1>{{ __('main.title') }}</h1>
-    <p>{{ $homeBlocks->getTranslatedAttribute('title') }}</p>
-    <ul>
-        @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-            <li>
-                <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-                    {{ $properties['native'] }}
-                </a>
-            </li>
-        @endforeach
-    </ul>
-    <a href="{{ LaravelLocalization::localizeUrl(route('about')) }}">{{ __('main.about_us') }}</a> --}}
-
+    {{-- Hero Section --}}
     <section class="hero-section">
         <div class="container">
             <div class="newsletter-box">
@@ -83,19 +70,15 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
             </div>
         </div>
     </section>
-
+    {{-- About Section --}}
     <section class="about-dataup-section">
         <div class="container">
             <div class="row justify-content-between row-gap-5">
                 <div class="col-12 col-lg-5">
-                    <img src="{{ asset($homeBlocks->getTranslatedAttribute('imageLink')) }}" alt="about-dataup" class="home-img"/>
+                    <img src="{{ $homeBlocks->imageLink }}" alt="about-dataup" class="home-img"/>
                 </div>
                 <div class="col-12 col-lg-5">
-                    {{-- @if(LaravelLocalization::getCurrentLocale() == 'en') --}}
                         <h2 class="mb-3">{{ __('main.about')}} <span class="primary-color">DataUp</span> – {{ __('main.tde')}}</h2>
-                    {{-- @else
-                        <h2 class="mb-3">عن <span class="primary-color">DataUp</span> – محرك قاعدة البيانات</h2>
-                    @endif --}}
                     <p class="about-subtitle gradient-text">{{ $homeBlocks->getTranslatedAttribute('sub_title') }}</p>
                     <div class="mt-3 mb-4 pb-2 fs-5 line-height-32">{!! $homeBlocks->getTranslatedAttribute('overview') !!}</div>
                     <button class="cstm-btn2">{{ __('main.learn_more')}}</button>
@@ -103,7 +86,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
             </div>
         </div>
     </section>
-
+    {{-- Services Section --}}
     <section class="our-services-section">
         <div class="container">
             <div class="row justify-content-between row-gap-5">
@@ -114,8 +97,32 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
                     <button class="cstm-btn2">{{ __('main.learn_more')}}</button>
                 </div>
                 <div class="col-12 col-lg-5">
-                    <img src="{{ asset($homeBlocks->getTranslatedAttribute('serviceImageLink')) }}" alt="about-dataup" class="home-img"/>
+                    <img src="{{ $homeBlocks->serviceImageLink }}" alt="about-dataup" class="home-img"/>
                 </div>
+            </div>
+        </div>
+    </section>
+    {{-- Clients Section--}}
+    <section class="clients-section">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between gap-5 mb-4">
+                <h2><span class="primary-color">{{ __('main.our_clients')}}</span> {{ __('main.tuf')}}</h2>
+                <a href="#"><p class="fw-medium text-link text-nowrap">{{ __('main.show_all')}}</p></a>
+            </div>
+            <div class="row row-gap-4">
+                @foreach ($clients as $client)
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="clients-card">
+                            <img src=" {{ $client->imageLink}} " alt="{{$client->image_alt_tag}}" class="client-img"/>
+                            @if (isset($client->logoLink))
+                                <img src="{{ $client->logoLink }}" alt="{{$client->image_alt_tag}}" class="client-logo"/>
+                            @else
+                                <h5>{{$client->getTranslatedAttribute('title')}}</h5>
+                            @endif
+                            <p class="fs-6 fw-medium">{!! $client->getTranslatedAttribute('overview') !!}</p>
+                        </div>
+                    </div>
+                @endforeach
             </div>
         </div>
     </section>
