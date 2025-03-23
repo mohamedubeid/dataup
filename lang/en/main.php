@@ -35,4 +35,10 @@ return [
     'scalability' => 'Scalability ',
     'slexible_solutions' => 'Flexible solutions tailored to your needs',
     'why_choose' => 'Why Choose',
+    'learn_more' => 'Learn More',
+    'tde' => 'The Database Engine',
+    'woe' => 'We offer expert',
+    'dps' => 'data processing solutions',
+    'tta' => 'tailored to AI and machine learning needs',
+    'our_services' => 'Our Services',
 ];
