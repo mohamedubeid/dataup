@@ -3,7 +3,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 $newLocale = LaravelLocalization::getCurrentLocale() === 'en' ? 'ar' : 'en';
 $switchUrl = LaravelLocalization::getLocalizedURL($newLocale, null, [], true);
 @endphp
-<header class="mb-5 pb-4">
+<header>
   <div class="container">
     <div class="row flex-nowrap align-items-center justify-content-between mt-4 pt-2">
       <div class="col-auto">

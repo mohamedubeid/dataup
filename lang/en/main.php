@@ -59,5 +59,7 @@ return [
     'contact_message' => 'Whether you have a question, feedback, or want to get involved, please reach out to us at',
     'contact_success' => 'Your message has been sent successfully!',
     'success' => 'Success',
-    'most_popular' => 'Most Popular'
+    'most_popular' => 'Most Popular',
+    'what_we_do' => 'What We Do',
+    'projects_we_worked_on' => 'Projects We’ve worked on'
 ];
