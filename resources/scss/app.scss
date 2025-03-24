@@ -9,4 +9,8 @@
 @use 'layouts/footer';
 
 // home
-@use 'home/index'
+@use 'home/index';
+
+// components
+@use 'components/contact-form.scss';
+@use 'components/our-plans.scss';

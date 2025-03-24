@@ -126,32 +126,14 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
             </div>
         </div>
     </section>
-
+    {{-- Our Plans Section --}}
     <section class="our-plans-section">
         <div class="container">
             <div class="d-flex align-items-center justify-content-between gap-5 mb-4">
                 <h2><span class="primary-color">{{ __('main.flexible')}}</span> {{ __('main.ppf')}}</h2>
                 <a href="#"><p class="fw-medium text-link text-nowrap">{{ __('main.learn_more')}}</p></a>
             </div>
-
-            <div class="plans d-lg-block row justify-content-center row-gap-4">
-                @foreach ($plans as $index => $plan)
-                    <div class="col-3">
-                        <h2 class="mb-3">${{ $plan->price }} <span class="fs-6">/{{ __('main.month')}}</span></h2>
-                        <h6 class="fw-medium"><span class="primary-color">{{ $plan->getTranslatedAttribute('title') }}</span> ({{ $plan->getTranslatedAttribute('sub_title') }})</h6>
-                        <div class=" mb-3">{!! $plan->getTranslatedAttribute('overview') !!}</div>
-                        @foreach ($plan->features as $feature)
-                            <div class="mb-3 d-flex gap-3">
-                                <img src="{{ asset('images/check-circle.svg')}}" alt="check-circle"/>
-                                <p>{{$feature->getTranslatedAttribute('title')}}</p>
-                            </div>
-                        @endforeach
-                        <button class="mt-3 {{ $index == 2 ? 'choose-plan-prim-btn' : 'choose-plan-sec-btn' }}">
-                            {{ __('main.choose_plan')}}
-                        </button>
-                    </div>
-                @endforeach
-            </div>
+            @include('site.components.our-plans', ['plans' => $plans])
         </div>
     </section>
     {{-- Contact Us Form Section --}}
@@ -159,22 +141,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
         <div class="container">
             <h2 class="mb-3 fw-bold">{{ __('main.we_love_to')}} <span class="primary-color"> {{ __('main.hear_from_you')}}</span> {{ __('main.from_you')}}</h2>
             <p class="fs-5 mb-4 pb-2">{{ __('main.contact_message')}}</p>
-            <div class="contact-us-form-container">
-                @if(session('success'))
-                    <div class="alert alert-success text-center" role="alert">
-                        {{ session('success') }}
-                    </div>
-                @endif
-                <form method="POST" action="javascript:void(0)" id="contactUsForm">
-                    @csrf
-                    <input name="first_name" type="text" placeholder="{{ __('main.your_first_name')}}" aria-label="first_name" required class="{{ LaravelLocalization::getCurrentLocale() == 'en' ? 'text-end' : 'text-start' }}" />
-                    <input name="last_name" type="text" placeholder="{{ __('main.your_last_name')}}" aria-label="last_name" required class="{{ LaravelLocalization::getCurrentLocale() == 'en' ? 'text-end' : 'text-start' }}" />
-                    <input  name="email" type="email" placeholder="{{ __('main.working_email')}}" aria-label="email" required class="{{ LaravelLocalization::getCurrentLocale() == 'en' ? 'text-end' : 'text-start' }}" />
-                    <input  name="phone_number" type="text" placeholder="{{ __('main.phone_number')}}" aria-label="phone_number" required class="{{ LaravelLocalization::getCurrentLocale() == 'en' ? 'text-end' : 'text-start' }}" />
-                    <textarea id="message" name="message" rows="4" placeholder="{{ __('main.what_are_you_looking_for')}}" required></textarea>
-                    <button class="form-btn">{{ __('main.submit')}}</button>
-                </form>
-            </div>
+            @include('site.components.contact-form')
         </div>
     </section>
 @endsection
@@ -227,45 +194,6 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
                     document.getElementById('formResponseHero').innerHTML = '';
                 }, 10000);
             });
-            });
-
-            const contactForm = document.getElementById("contactUsForm");
-
-            contactForm.addEventListener("submit", function (event) {
-                event.preventDefault();
-
-                const form = event.target;
-                const formData = new FormData(form);
-                const csrfToken = form.querySelector('input[name="_token"]').value;
-
-                fetch("{{ route('home.contact.submit') }}", {
-                    method: "POST",
-                    headers: {
-                        "X-CSRF-TOKEN": csrfToken,
-                        "Accept": "application/json"
-                    },
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        Swal.fire({
-                            icon: "success",
-                            title: "{{ __('main.success') }}",
-                            text: "{{ __('main.contact_success') }}",
-                            confirmButtonText: "OK"
-                        });
-                        contactForm.reset();
-                    } else {
-                        Swal.fire({
-                            icon: "error",
-                            title: "{{ __('main.error') }}",
-                        });
-                    }
-                })
-                .catch(error => {
-                    console.error("Error:", error);
-                });
-            });
+        });
     })
 </script>
