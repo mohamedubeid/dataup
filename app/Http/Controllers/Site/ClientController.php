@@ -10,8 +10,7 @@ class ClientController extends Controller
 {
     public function index() {
         $homeBlocks = HomeBlock::first();
-				$clients = Client::orderBy('id', 'desc')
-				->take(3)->get();
+				$clients = Client::orderBy('id', 'desc')->paginate(9);
         return view('site.clients.index', compact('homeBlocks', 'clients'));
     }
 }

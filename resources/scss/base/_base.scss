@@ -106,13 +106,49 @@ p {
     margin-bottom: 24px;
   }
   .client-logo {
-    max-width: 116;
+    max-width: 116px;
     width: 100%;
     max-height: 32px;
     margin-bottom: 24px;
+  }
+  p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
   }
 }
 
 .text-align-start {
   text-align: start !important;
+}
+
+.page-item {
+  margin: 0 4px;
+  .page-link {
+    border: none;
+
+    background: #FFFFFF4D;
+    color: #000;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 20px;
+    font-weight: 500;
+    &:hover {
+      background: #48BF90;
+
+    }
+  }
+}
+.active>.page-link {
+  background: #48BF90;
+
+}
+@media (max-width: 575.98px) {
+  .page-item {
+    .page-link {
+      padding: 4px 8px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
 }
