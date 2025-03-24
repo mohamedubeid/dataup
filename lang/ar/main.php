@@ -47,6 +47,16 @@ return [
     'flexible' => 'خطط تسعير مرنة',
     'ppf' => 'تناسب احتياجاتك', 
     'month' => "شهر",
-    'choose_plan' => 'اختر الخطة'
+    'choose_plan' => 'اختر الخطة',
+    'your_first_name' => 'اسمك الأول',
+    'your_last_name' => 'اسمك الأخير',
+    'working_email' => 'البريد الإلكتروني',
+    'phone_number' => 'رقم الهاتف',
+    'what_are_you_looking_for' => 'ماذا تبحث عن؟',
+    'we_love_to' => 'يسعدنا',
+    'hear_from_you' => 'سماع',
+    'from_you' => 'رأيك',
+    'contact_message' => 'سواء كان لديك سؤال، ملاحظات، أو ترغب في المشاركة، لا تتردد في التواصل معنا على',
+    'contact_success' => 'تم إرسال رسالتك بنجاح! سنعاود الاتصال بك قريبًا.',
 
 ];

@@ -21,6 +21,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function()
     Route::get('/', [HomeController::class, 'index'])->name('home');
     Route::get('/about', [HomeController::class, 'about'])->name('about');
     Route::post('/subscribe', [HomeController::class, 'subscribe'])->name('newsletter.subscribe');
+    Route::post('/contact-form-submit', [HomeController::class, 'submitContactForm'])->name('home.contact.submit');
 
 });
 

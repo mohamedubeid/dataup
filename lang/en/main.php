@@ -47,5 +47,16 @@ return [
     'flexible' => 'Flexible',
     'ppf' => 'Pricing Plans for Your Needs',
     'month' => 'Month',
-    'choose_plan' => 'Choose Plan'
+    'choose_plan' => 'Choose Plan',
+    "your_first_name" => 'Your First Name',
+    "your_last_name" => 'Your Last Name',
+    "working_email" => 'Working Email',
+    "phone_number" => 'Phone Number',
+    "what_are_you_looking_for" => 'What Are you looking for?',
+    'we_love_to' => 'We’d love to',
+    'hear_from_you' => 'hear',
+    'from_you' => 'from you!',
+    'contact_message' => 'Whether you have a question, feedback, or want to get involved, please reach out to us at',
+    'contact_success' => 'Your message has been sent successfully!',
+    'success' => 'Success',
 ];
