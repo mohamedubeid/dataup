@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Site\ClientController;
 use App\Http\Controllers\Site\HomeController;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -22,7 +23,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function()
     Route::get('/about', [HomeController::class, 'about'])->name('about');
     Route::post('/subscribe', [HomeController::class, 'subscribe'])->name('newsletter.subscribe');
     Route::post('/contact-form-submit', [HomeController::class, 'submitContactForm'])->name('home.contact.submit');
-
+    Route::get('/clients', [ClientController::class, 'index'])->name('clients.index');
 });
 
 /** OTHER PAGES THAT SHOULD NOT BE LOCALIZED **/

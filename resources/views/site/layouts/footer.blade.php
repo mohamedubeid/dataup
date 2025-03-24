@@ -6,8 +6,12 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
     <div class="footer-box-style"> 
       <div class="row row-gap-5">
         <div class="col-12 col-lg-5">
-          <img id="logo-light" src={{ asset("images/logo-light.svg")}} alt="logo-light" width="173px" height="56px" class="logo-style pb-2"/>
-          <img id="logo-dark" src={{ asset("images/logo-dark.svg")}} alt="logo-dark" width="173px" height="56px" class="logo-style"/>
+          <a href="{{ route('home') }}">
+            <img id="logo-light" src={{ asset("images/logo-light.svg")}} alt="logo-light" width="173px" height="56px" class="logo-style pb-2"/>
+          </a>
+          <a href="{{ route('home') }}">
+            <img id="logo-dark" src={{ asset("images/logo-dark.svg")}} alt="logo-dark" width="173px" height="56px" class="logo-style"/>
+          </a>
           @if(isset($homeBlocks))
             <div class="mt-3 pb-2">{!! $homeBlocks->getTranslatedAttribute('footer_dsc') ?? '' !!}</div>
           @endif

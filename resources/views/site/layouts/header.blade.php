@@ -6,14 +6,19 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
   <div class="container">
     <div class="row flex-nowrap align-items-center justify-content-between mt-4 pt-2">
       <div class="col-auto">
-        <img id="logo-light" src={{ asset("images/logo-light.svg") }} alt="dataup-light" width="173px" height="56px" class="logo-style"/>
-        <img id="logo-dark" src={{ asset("images/logo-dark.svg") }} alt="dataup-dark" width="173px" height="56px" class="logo-style"/>
+        <a href="{{ route('home') }}"><img id="logo-light" src={{ asset("images/logo-light.svg") }} alt="dataup-light" width="173px" height="56px" class="logo-style"/></a>
+        <a href="{{ route('home') }}"><img id="logo-dark" src={{ asset("images/logo-dark.svg") }} alt="dataup-dark" width="173px" height="56px" class="logo-style"/></a>
       </div>
       <div class="col-auto">
         <div class="d-flex align-items-center justify-content-center gap-3">
           <div class="d-flex align-items-center justify-content-between gap-4 nav-link d-none d-lg-flex">
             <a href="#"><p>{{ __('main.services')}}</p></a>
-            <a href="#"><p>{{ __('main.customers')}}</p></a>
+            <a href="{{ route('clients.index') }}">
+              <p 
+                class="{{ in_array(Route::currentRouteName(), ['clients.index']) ? 'active' : '' }}"
+              >
+                {{ __('main.customers')}}</p>
+            </a>
             <a href="#"><p>{{ __('main.pricing')}}</p></a>
             <div class="dropdown cstm-dropdown" >
               <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -25,7 +30,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
                 <li><a class="dropdown-item" href="#">{{ __('main.contactus')}}</a></li>
               </ul>
             </div>
-            <button type="button" class="cstm-btn">{{ __('main.getstarted') }}</button>
+            <button type="button" class="cstm-btn {{Route::currentRouteName() !== 'home' ? 'd-none' : ''}}">{{ __('main.getstarted') }}</button>
           </div>
           @include('site.layouts.mobile-menu')
           <div class="d-flex align-items-center gap-2">
