@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Client;
 use App\Models\HomeBlock;
 use App\Models\Newsletter;
+use App\Models\Plan;
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 
@@ -15,7 +16,9 @@ class HomeController extends Controller
         $homeBlocks = HomeBlock::first();
 				$clients = Client::orderBy('id', 'desc')
 				->take(3)->get();
-        return view('site.home.index', compact('homeBlocks', 'clients'));
+				$plans = Plan::orderBy('id', 'asc')
+				->take(3)->get();
+        return view('site.home.index', compact('homeBlocks', 'clients', 'plans'));
     }
 
     public function about() {

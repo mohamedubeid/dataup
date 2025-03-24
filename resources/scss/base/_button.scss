@@ -62,12 +62,9 @@
     color: rgba(35, 191, 124, 0.7);
   }
 }
-[data-theme="dark"] .choose-plan-sec {
-  color: #23BF7C;
-}
 
 .choose-plan-prim-btn {
-  @extend .choose-plan-sec;
+  @extend .choose-plan-sec-btn;
   background-color: #fff;
   color: #5243C2;
   &:hover {
@@ -75,8 +72,8 @@
     color: #7e74cc;
   }
 }
-[data-theme="dark"] .choose-plan-sec {
-  color: #5243C2;
+[data-theme="dark"] .choose-plan-prim-btn {
+  color: #5243C2 ;
   &:hover {
     background-color: #ffffffca;
     color: #7165c8;

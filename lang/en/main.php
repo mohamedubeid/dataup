@@ -45,5 +45,7 @@ return [
     'tuf' => 'Trust Us for Reliable Data Solutions',
     'show_all' => 'Show All',
     'flexible' => 'Flexible',
-    'ppf' => 'Pricing Plans for Your Needs'
+    'ppf' => 'Pricing Plans for Your Needs',
+    'month' => 'Month',
+    'choose_plan' => 'Choose Plan'
 ];
