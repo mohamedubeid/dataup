@@ -6,16 +6,20 @@
 
 @section('content')
 
-    <h1>{{ __('main.about_us') }}</h1>
-    <ul>
-        @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-            <li>
-                <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-                    {{ $properties['native'] }}
-                </a>
-            </li>
-        @endforeach
-    </ul>
-    <a href="{{ LaravelLocalization::localizeUrl(route('home')) }}">{{ __('main.home') }}</a>
+<section>
+    <div class="container">
+        <h1>{{ __('main.about_us') }}</h1>
+        <ul>
+            @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                <li>
+                    <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                        {{ $properties['native'] }}
+                    </a>
+                </li>
+            @endforeach
+        </ul>
+        <a href="{{ LaravelLocalization::localizeUrl(route('home')) }}">{{ __('main.home') }}</a>
+    </div>
+</section>
 
 @endsection

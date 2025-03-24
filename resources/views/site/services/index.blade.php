@@ -4,13 +4,13 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 @extends('site.layouts.app')
 
-@section('title', "Coustomers")
-@section('desc', "Our Clients Trust Us for Reliable Data Solutions.")
+@section('title', "Services")
+@section('desc', "What We Do...")
 
 @section('content')
 <section class="clients header-section">
   <div class="container">
-    clients
+    services
   </div>
 </section>
 @endsection

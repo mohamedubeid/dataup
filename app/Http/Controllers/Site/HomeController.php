@@ -27,6 +27,11 @@ class HomeController extends Controller
         return view('site.home.about', compact('homeBlocks'));
     }
 
+		public function contact() {
+			$homeBlocks = HomeBlock::withTranslation(app()->getLocale())->first();
+			return view('site.home.contact', compact('homeBlocks'));
+	}
+
     public function subscribe(Request $request) {
 		try {
 			$validated = $request->validate([
