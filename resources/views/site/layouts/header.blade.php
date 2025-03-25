@@ -6,13 +6,13 @@ $switchUrl = LaravelLocalization::getLocalizedURL($newLocale, null, [], true);
 <header>
   <div class="container">
     <div class="row flex-nowrap align-items-center justify-content-between mt-4 pt-2">
-      <div class="col-auto">
+      <div class="col-auto" data-aos="fade-down">
         <a href="{{ route('home') }}"><img id="logo-light" src={{ asset("images/logo-light.svg") }} alt="dataup-light" width="173px" height="56px" class="logo-style"/></a>
         <a href="{{ route('home') }}"><img id="logo-dark" src={{ asset("images/logo-dark.svg") }} alt="dataup-dark" width="173px" height="56px" class="logo-style"/></a>
       </div>
       <div class="col-auto">
         <div class="d-flex align-items-center justify-content-center gap-3">
-          <div class="d-flex align-items-center justify-content-between gap-4 nav-link d-none d-lg-flex">
+          <div class="d-flex align-items-center justify-content-between gap-4 nav-link d-none d-lg-flex" data-aos="fade-down">
             <a href="{{ route('services.index') }}">
               <p class="{{ in_array(Route::currentRouteName(), ['services.index']) ? 'active' : '' }}">
                 {{ __('main.services')}}
@@ -49,7 +49,7 @@ $switchUrl = LaravelLocalization::getLocalizedURL($newLocale, null, [], true);
             <button type="button" class="cstm-btn {{Route::currentRouteName() !== 'home' ? 'd-none' : ''}}">{{ __('main.getstarted') }}</button>
           </div>
           @include('site.layouts.mobile-menu')
-          <div class="d-flex align-items-center gap-2">
+          <div class="d-flex align-items-center gap-2" data-aos="fade-down">
             <button id="themeToggle" class="theme-toggle">🌙</button>
             <a class="language-toggle" rel="alternate" hreflang="{{ $newLocale }}" href="{{ $switchUrl }}">
               {{ strtoupper($newLocale) }}

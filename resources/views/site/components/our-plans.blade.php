@@ -1,6 +1,9 @@
+@php
+    $aosAnimations = ['fade-right', 'fade-up', 'fade-left'];
+@endphp
 <div class="plans d-lg-block row justify-content-center row-gap-4">
     @foreach ($plans as $index => $plan)
-        <div class="col-3">
+        <div class="col-3" data-aos="{{ $aosAnimations[$index % count($aosAnimations)] }}">
             <div class="most-popular">
                 <p>{{ __('main.most_popular')}}</p>
             </div>

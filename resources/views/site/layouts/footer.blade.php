@@ -1,7 +1,7 @@
 @php
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 @endphp
-<footer class="mt-5 mb-4">
+<footer class="mt-5 mb-4" data-aos="slide-up">
   <div class="container">
     <div class="footer-box-style"> 
       <div class="row row-gap-5">

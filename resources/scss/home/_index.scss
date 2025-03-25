@@ -46,13 +46,26 @@
     .to-next-sec-btn-style {
       background-color: transparent;
       border: none;
+      transition: transform 0.3s ease-in-out;
+      animation: bounce 1s infinite ease-in-out;
       svg {
         path {
           fill: var(--text-color)
         }
       }
+      &:hover {
+        transform: translateY(10px);
+      }
     }
   }
+  @keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
   .why-choose-us-style {
     background: var(--why-choose-us-background);
     padding: 18px 0 26px 0;

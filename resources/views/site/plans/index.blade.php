@@ -11,7 +11,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 <section class="margin-page">
   <div class="container">
 
-      <h2 class="mb-5 pb-4 text-center"><span class="primary-color">{{ __('main.flexible')}}</span> {{ __('main.ppf')}}</h2>
+    <h2 class="mb-5 pb-4 text-center"><span class="primary-color">{{ __('main.flexible')}}</span> {{ __('main.ppf')}}</h2>
 
     @include('site.components.our-plans', ['plans' => $plans])
   </div>

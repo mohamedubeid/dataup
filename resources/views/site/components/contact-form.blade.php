@@ -2,7 +2,7 @@
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 @endphp
 
-<div class="contact-us-form-container">
+<div class="contact-us-form-container" data-aos="fade-up">
     <form method="POST" action="javascript:void(0)" id="contactUsForm">
         @csrf
         <input 

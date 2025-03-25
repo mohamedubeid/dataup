@@ -10,13 +10,13 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 @section('content')
 <section class="margin-page">
     <div class="container">
-        <div class="mb-5">
+        <div class="mb-5" data-aos="fade-down">
             <p class="fw-medium">{{ __('main.projects_we_worked_on')}}..</p>
             <h2><span class="primary-color">{{ __('main.our_clients')}}</span> {{ __('main.tuf')}}</h2>
         </div>
         <div class="row row-gap-4">
-            @foreach ($clients as $client)
-                <div class="col-12 col-sm-6 col-md-4">
+            @foreach ($clients as $index => $client)
+                <div class="col-12 col-sm-6 col-md-4" data-aos="{{$index % 2 == 0 ? 'fade-up' : 'fade-down'}}">
                     <div class="clients-card">
                         <img src=" {{ $client->imageLink}} " alt="{{$client->image_alt_tag}}" class="client-img"/>
                         @if (isset($client->logoLink))
