@@ -61,5 +61,11 @@ return [
     'success' => 'Success',
     'most_popular' => 'Most Popular',
     'what_we_do' => 'What We Do',
-    'projects_we_worked_on' => 'Projects We’ve worked on'
+    'projects_we_worked_on' => 'Projects We’ve worked on',
+    'empowering_ai_with' => 'Empowering AI With',
+    'high_quality_data' => 'High-Quality Data',
+    'who' => 'Who ',
+    'we' => 'We ',
+    'are' => 'Are?',
+    '?' => '?'
 ];

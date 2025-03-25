@@ -6,19 +6,74 @@
 
 @section('content')
 
-<section>
+<section class="margin-page">
     <div class="container">
-        <h1>{{ __('main.about_us') }}</h1>
-        <ul>
-            @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                <li>
-                    <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-                        {{ $properties['native'] }}
-                    </a>
-                </li>
-            @endforeach
-        </ul>
-        <a href="{{ LaravelLocalization::localizeUrl(route('home')) }}">{{ __('main.home') }}</a>
+        <h2 class="mb-5 text-center">{{ __('main.about')}} <span class="primary-color">DataUp</span> – {{ __('main.tde')}}</h2>
+        <hr class="about-line">
+
+        @php
+            $overview1 = $aboutBlocks->getTranslatedAttribute('overview_1');
+        @endphp
+        @if ($overview1)
+        <div class="row mt-5 row-gap-3">
+            <div class="col-12 col-lg-3">
+                <h2>{{ __('main.empowering_ai_with')}} <span class="primary-color">{{ __('main.high_quality_data')}}</span></h2>
+            </div>
+            <div class="col fs-5">
+                {!! $overview1 !!}
+            </div>
+        </div>
+        @endif
+
+        @php
+            $overview2 = $aboutBlocks->getTranslatedAttribute('overview_2');
+        @endphp
+        @if ($overview2)
+        <div class="row flex-column-reverse flex-lg-row mt-5 row-gap-3">
+            <div class="col fs-5">
+                {!! $overview2 !!}
+            </div>
+            <div class="col-12 col-lg-2">
+                <h2>{{ __('main.who')}} <span class="primary-color">{{ __('main.we')}}</span> {{ __('main.are')}}</h2>
+            </div>
+        </div>
+        @endif
+
+
+        @if ($aboutBlocks->imageLink)
+            <div class="mt-5">
+                <img src="{{ $aboutBlocks->imageLink}}" alt="{{ $aboutBlocks->image_alt_tag ?? 'about-page-image'}}" class="about-page-image"/>
+            </div>
+        @endif
+
+        @php
+            $overview3 = $aboutBlocks->getTranslatedAttribute('overview_3');
+        @endphp
+        @if ($overview3)
+        <div class="row flex-column-reverse flex-lg-row mt-5 row-gap-3">
+            <div class="col fs-5">
+                    {!! $overview3 !!}
+                </div>
+                <div class="col-12 col-lg-3">
+                    <h2>{{ __('main.empowering_ai_with')}} <span class="primary-color">{{ __('main.high_quality_data')}}</span></h2>
+                </div>
+            </div>
+        @endif
+
+        @php
+            $overview4 = $aboutBlocks->getTranslatedAttribute('overview_4');
+        @endphp
+        @if ($overview4)
+        <div class="row mt-5 row-gap-3">
+            <div class="col-12 col-lg-2">
+                <h2>{{ __('main.why_choose')}} <span class="primary-color fix-question-mark">DataUp</span>{{ __('main.?')}}</h2>
+                </div>
+                <div class="col fs-5">
+                    {!! $overview4 !!}
+                </div>
+            </div>
+        @endif
+
     </div>
 </section>
 

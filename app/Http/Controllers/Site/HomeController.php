@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
+use App\Models\AboutBlock;
 use App\Models\Client;
 use App\Models\Contact;
 use App\Models\HomeBlock;
@@ -24,7 +25,8 @@ class HomeController extends Controller
 
     public function about() {
         $homeBlocks = HomeBlock::withTranslation(app()->getLocale())->first();
-        return view('site.home.about', compact('homeBlocks'));
+				$aboutBlocks = AboutBlock::withTranslation(app()->getLocale())->first();
+        return view('site.home.about', compact('homeBlocks', 'aboutBlocks'));
     }
 
 		public function contact() {

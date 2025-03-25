@@ -83,6 +83,11 @@
   direction: rtl;
   text-align: right;
 }
+.fix-question-mark {
+  unicode-bidi: plaintext;
+  direction: rtl;
+  text-align: right;
+}
 
 .about-dataup-section {
   margin-top: 170px;
@@ -124,4 +129,14 @@
   margin: 170px 0;
   text-align: center;
   text-transform: capitalize;
+}
+
+
+.about-page-image {
+  width: 100%;
+  max-height: 445px;
+  border-radius: 12px;
+}
+.about-line {
+  border: 1px solid #00000026
 }
