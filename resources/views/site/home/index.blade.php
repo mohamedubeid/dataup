@@ -82,7 +82,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
                             <h2 class="mb-3">{{ __('main.about')}} <span class="primary-color">DataUp</span> – {{ __('main.tde')}}</h2>
                         <p class="about-subtitle gradient-text">{{ __('main.about_subtitle')}}</p>
                         <div class="mt-3 mb-4 pb-2 fs-5 line-height-32">{!! $homeBlocks->getTranslatedAttribute('overview') !!}</div>
-                        <button class="cstm-btn2">{{ __('main.learn_more')}}</button>
+                        <a href="{{ route('about') }}" class="cstm-btn2">{{ __('main.learn_more')}}</a>
                     </div>
                 </div>
             </div>
@@ -95,7 +95,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
                         <p class="gradient-text">{{ __('main.our_services')}}</p>
                         <h2 class="mb-4">{{ __('main.woe')}} <span class="primary-color">{{ __('main.dps')}} </span>{{ __('main.tta')}}</h2>
                         <div class="mb-4 pb-2 fs-5 line-height-32 cstm-color">{!! $homeBlocks->getTranslatedAttribute('services_overview') !!}</div>
-                        <button class="cstm-btn2">{{ __('main.learn_more')}}</button>
+                        <a href="{{ route('services.index') }}" class="cstm-btn2">{{ __('main.learn_more')}}</a>
                     </div>
                     <div class="col-12 col-lg-5" data-aos="fade-left">
                         <img src="{{ $homeBlocks->serviceImageLink }}" alt="about-dataup" class="home-img"/>
@@ -108,7 +108,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
             <div class="container">
                 <div class="d-flex align-items-center justify-content-between gap-5 mb-4" data-aos="fade-up">
                     <h2><span class="primary-color">{{ __('main.our_clients')}}</span> {{ __('main.tuf')}}</h2>
-                    <a href="#"><p class="fw-medium text-link text-nowrap">{{ __('main.show_all')}}</p></a>
+                    <a href="{{ route('clients.index') }}"><p class="fw-medium text-link text-nowrap">{{ __('main.show_all')}}</p></a>
                 </div>
                 <div class="row row-gap-4">
                     @foreach ($clients as $index => $client)
@@ -132,7 +132,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
             <div class="container">
                 <div class="d-flex align-items-center justify-content-between gap-5 mb-4" data-aos="fade-up">
                     <h2><span class="primary-color">{{ __('main.flexible')}}</span> {{ __('main.ppf')}}</h2>
-                    <a href="#"><p class="fw-medium text-link text-nowrap">{{ __('main.learn_more')}}</p></a>
+                    <a href="{{ route('plans.index') }}"><p class="fw-medium text-link text-nowrap">{{ __('main.learn_more')}}</p></a>
                 </div>
                 @include('site.components.our-plans', ['plans' => $plans])
             </div>

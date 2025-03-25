@@ -16,9 +16,9 @@
                     <p>{{$feature->getTranslatedAttribute('title')}}</p>
                 </div>
             @endforeach
-            <button class="mt-3 {{ $index == 2 ? 'choose-plan-prim-btn' : 'choose-plan-sec-btn' }}">
+            <a href="{{ route('contact') }}" class="mt-3 {{ $index == 2 ? 'choose-plan-prim-btn' : 'choose-plan-sec-btn' }}">
                 {{ __('main.choose_plan')}}
-            </button>
+            </a>
         </div>
     @endforeach
 </div>

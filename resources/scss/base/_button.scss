@@ -52,6 +52,8 @@
 .choose-plan-sec-btn {
   @extend .cstm-btn;
   width: 100%;
+  display: block;
+  text-align: center;
   background: rgba(35, 191, 124, 0.1);
   color: #23BF7C;
   padding: 14px;
