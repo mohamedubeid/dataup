@@ -67,5 +67,6 @@ return [
     'who' => 'Who ',
     'we' => 'We ',
     'are' => 'Are?',
-    '?' => '?'
+    '?' => '?',
+    'about_subtitle' => 'Empowering AI with High-Quality Data'
 ];

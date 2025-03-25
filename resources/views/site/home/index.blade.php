@@ -80,7 +80,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
                     </div>
                     <div class="col-12 col-lg-5">
                             <h2 class="mb-3">{{ __('main.about')}} <span class="primary-color">DataUp</span> – {{ __('main.tde')}}</h2>
-                        <p class="about-subtitle gradient-text">{{ $homeBlocks->getTranslatedAttribute('sub_title') }}</p>
+                        <p class="about-subtitle gradient-text">{{ __('main.about_subtitle')}}</p>
                         <div class="mt-3 mb-4 pb-2 fs-5 line-height-32">{!! $homeBlocks->getTranslatedAttribute('overview') !!}</div>
                         <button class="cstm-btn2">{{ __('main.learn_more')}}</button>
                     </div>
