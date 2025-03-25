@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 22, 2025 at 01:41 PM
+-- Generation Time: Mar 25, 2025 at 07:50 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -49,7 +49,7 @@ CREATE TABLE `about_blocks` (
 --
 
 INSERT INTO `about_blocks` (`id`, `title_1`, `overview_1`, `title_2`, `overview_2`, `title_3`, `overview_3`, `title_4`, `overview_4`, `image`, `image_alt_tag`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Empowering AI With High-Quality Data', '<p>At DataUp, we are passionate about enabling the future of artificial intelligence through precise, high-quality data annotation and curation services. Our expertise lies in data labeling, processing, and management, ensuring businesses and AI-driven companies can build more accurate and efficient machine learning models.</p>', 'Who We Are?', '<p>We are a team of AI enthusiasts, data scientists, and technology experts dedicated to streamlining the data preparation process. Our goal is to provide businesses with the highest-quality datasets that power their AI models, enabling innovation, automation, and scalability.</p>', 'Empowering AI With High-Quality Data', '<p>At DataUp, we are passionate about enabling the future of artificial intelligence through precise, high-quality data annotation and curation services. Our expertise lies in data labeling, processing, and management, ensuring businesses and AI-driven companies can build more accurate and efficient machine learning models.</p>', 'Why Choose DataUp?', '<p>Quality &amp; Accuracy &ndash; Expert data labeling ensures top-tier results.</p>\n<p>Efficiency &ndash; Fast turnaround times without compromising precision.</p>\n<p>Scalability &ndash; Flexible, tailored solutions to meet diverse project needs.</p>', NULL, NULL, NULL, '2025-03-14 07:45:15', NULL);
+(1, 'Empowering AI With High-Quality Data', '<p>We are a team of AI enthusiasts, data scientists, and technology experts dedicated to streamlining the data preparation process. Our goal is to provide businesses with the highest-quality datasets that power their AI models, enabling innovation, automation, and scalability.</p>', 'Who We Are?', '<p>We are a team of AI enthusiasts, data scientists, and technology experts dedicated to streamlining the data preparation process. Our goal is to provide businesses with the highest-quality datasets that power their AI models, enabling innovation, automation, and scalability.</p>', 'Empowering AI With High-Quality Data', '<p>At DataUp, we are passionate about enabling the future of artificial intelligence through precise, high-quality data annotation and curation services. Our expertise lies in data labeling, processing, and management, ensuring businesses and AI-driven companies can build more accurate and efficient machine learning models.</p>', 'Why Choose DataUp?', '<p>Quality &amp; Accuracy &ndash; Expert data labeling ensures top-tier results.</p>\n<p>Efficiency &ndash; Fast turnaround times without compromising precision.</p>\n<p>Scalability &ndash; Flexible, tailored solutions to meet diverse project needs.</p>', 'about-blocks\\March2025\\S5Mr03VMbGdh4F02Xdrw.png', NULL, NULL, '2025-03-25 09:14:18', NULL);
 
 -- --------------------------------------------------------
 
@@ -70,6 +70,17 @@ CREATE TABLE `clients` (
   `slug` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `clients`
+--
+
+INSERT INTO `clients` (`id`, `title`, `overview`, `image`, `image_alt_tag`, `logo`, `created_at`, `updated_at`, `deleted_at`, `slug`) VALUES
+(1, 'client name 1', '<p>client 1client 1client 1client 1client 1client 1client 1client 1client 1client 1client 1client 1client 1client 1client 1client 1cliennt 1client 1</p>', 'clients\\March2025\\BHvt6rSrWJkLqVi3yiBX.png', 'Image Alt Tag', 'clients\\March2025\\yIsLZrwsur62j4EgkLzP.png', '2025-03-23 13:01:14', '2025-03-23 13:16:36', NULL, 'client-name-1'),
+(2, 'Title en 2', '<p>Title en 2Title en 2Title en 2Title en 2Title en 2Title en 2Title en 2Title en 2Title en 2Title en 2Title en 2Title en 2Title en 2Title en 2Title&nbsp;</p>', 'clients\\March2025\\OYcmAwBGWG0BsikkNqtS.png', 'Image Alt Tag', 'clients\\March2025\\QnOQbLIfBZS0BMicTpWF.png', '2025-03-23 13:03:03', '2025-03-23 13:16:26', NULL, 'title-en-2'),
+(3, 'Title en 3', '<p>Title en 3Title en 3Title en 3Title en 3Title en 3Title en 3Title en 3Title en 3Title</p>', 'clients\\March2025\\do98SdeNZzjPhaTVFTuh.png', 'Image Alt Tag', 'clients\\March2025\\DbwjCnBAGPTvcO8FFtAS.png', '2025-03-23 13:03:55', '2025-03-23 13:16:12', NULL, 'title-en-3'),
+(4, 'Title en 4', '<p>Title en 4Title en 4Title en 4Title en 4Title en 4Title en 4Title en 4Title en 4T</p>', 'clients\\March2025\\BKYdPDvE0BLBdBbDUDTQ.png', 'Image Alt Tag', 'clients\\March2025\\vNGHoWxhgI2ZkZSfKhBz.png', '2025-03-23 13:04:35', '2025-03-23 13:15:56', NULL, 'title-en-4'),
+(5, 'Title en', '<p>Title enTitle enTitle enTitle enTitle enTitle enTitle enTitle enTitle enTitle enTitle&nbsp;</p>', 'clients\\March2025\\ZI7TssuuXgyGVgxnlxQ8.png', 'Image Alt Tag', NULL, '2025-03-23 13:05:07', '2025-03-23 13:17:29', NULL, 'title-en');
+
 -- --------------------------------------------------------
 
 --
@@ -87,6 +98,31 @@ CREATE TABLE `contacts` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `contacts`
+--
+
+INSERT INTO `contacts` (`id`, `first_name`, `last_name`, `email`, `phone_number`, `message`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'Mohamed', 'Ubeid', 'mohammed.ubeid99@gmail.com', '999', 'test', '2025-03-24 10:52:33', '2025-03-24 10:52:33', NULL),
+(2, 'Mohamed', 'Ubeid', 'admin@dataup.com', '999', 'test', '2025-03-24 10:59:29', '2025-03-24 10:59:29', NULL),
+(3, 'Mohamed', 'Ubeid', 'admin@dataup.com', '999', 'test', '2025-03-24 11:00:00', '2025-03-24 11:00:00', NULL),
+(4, 'Mohamed', 'Ubeid', 'admin@dataup.com', '999', 'test', '2025-03-24 11:01:33', '2025-03-24 11:01:33', NULL),
+(5, 'Mohamed', 'Ubeid', 'admin@dataup.com', '999', 'test', '2025-03-24 11:01:55', '2025-03-24 11:01:55', NULL),
+(6, 'Mohamed', 'Ubeid', 'admin@dataup.com', '999', 'test', '2025-03-24 11:08:05', '2025-03-24 11:08:05', NULL),
+(7, 'Mohamed', 'Ubeid', 'admin@dataup.com', '999', 'test', '2025-03-24 11:08:39', '2025-03-24 11:08:39', NULL),
+(8, 'Mohamed', 'Ubeid', 'admin@dataup.com', '999', 'test', '2025-03-24 11:27:15', '2025-03-24 11:27:15', NULL),
+(9, 'Mohamed', 'Ubeid', 'admin@dataup.com', '999', 'test', '2025-03-24 11:28:18', '2025-03-24 11:28:18', NULL),
+(10, 'Mohamed', 'Ubeid', 'admin@dataup.com', '99', 'test', '2025-03-24 11:30:50', '2025-03-24 11:30:50', NULL),
+(11, 'Mohamed', 'Ubeid', 'admin@dataup.com', '999', 'test', '2025-03-24 11:31:57', '2025-03-24 11:31:57', NULL),
+(12, 'Mohamed', 'Ubeid', 'admin@dataup.com', '999', 'test', '2025-03-24 11:32:48', '2025-03-24 11:32:48', NULL),
+(13, 'fasd', 'asdf', 'admin@dataup.com', 'asdf', 'asdf', '2025-03-24 12:40:07', '2025-03-24 12:40:07', NULL),
+(14, 'afsdf11', 'asdfas', 'admin@dataup.com', '999', 'tst', '2025-03-24 13:05:35', '2025-03-24 13:05:35', NULL),
+(15, 'fasdf', 'asdf', 'mohammed.ubeid99@gmail.com', '999', 'test', '2025-03-24 13:05:45', '2025-03-24 13:05:45', NULL),
+(16, 'Mohamed12', 'Ubeid', 'admin@dataup.com', '999', 'test', '2025-03-24 16:53:11', '2025-03-24 16:53:11', NULL),
+(17, 'Mohamed', 'Ubeid', 'admin@dataup.com', '999', 'this is test messaage', '2025-03-25 09:07:18', '2025-03-25 09:07:18', NULL),
+(18, 'test user', 'last name', 'mohamed@gmail.com', '123456789', 'ttttttttttttt', '2025-03-25 09:12:08', '2025-03-25 09:12:08', NULL),
+(19, 'Mohamed999', 'Ubeid', 'admin@dataup.com', '99999', 'test', '2025-03-25 16:29:49', '2025-03-25 16:29:49', NULL);
 
 -- --------------------------------------------------------
 
@@ -139,26 +175,26 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (22, 4, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
 (23, 4, 'title', 'text', 'Title', 0, 1, 1, 1, 1, 1, '{}', 2),
 (24, 4, 'sub_title', 'text', 'Sub Title', 0, 1, 1, 1, 1, 1, '{}', 3),
-(25, 4, 'overview', 'rich_text_box', 'Overview', 0, 1, 1, 1, 1, 1, '{}', 4),
+(25, 4, 'overview', 'rich_text_box', 'Overview', 0, 0, 1, 1, 1, 1, '{}', 4),
 (26, 4, 'price', 'number', 'Price', 0, 1, 1, 1, 1, 1, '{\"rule\":\"numeric|min:0\"}', 5),
 (27, 4, 'created_at', 'timestamp', 'Created At', 0, 0, 0, 0, 0, 0, '{}', 6),
 (28, 4, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 7),
 (29, 4, 'deleted_at', 'timestamp', 'Deleted At', 0, 0, 0, 0, 0, 0, '{}', 8),
 (30, 5, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
 (31, 5, 'title', 'text', 'Title', 0, 1, 1, 1, 1, 1, '{}', 2),
-(32, 5, 'overview', 'rich_text_box', 'Overview', 0, 1, 1, 1, 1, 1, '{}', 3),
+(32, 5, 'overview', 'rich_text_box', 'Overview', 0, 0, 0, 0, 0, 0, '{}', 3),
 (33, 5, 'created_at', 'timestamp', 'Created At', 0, 0, 0, 0, 0, 0, '{}', 4),
 (34, 5, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 5),
 (35, 5, 'deleted_at', 'timestamp', 'Deleted At', 0, 0, 0, 0, 0, 0, '{}', 6),
-(36, 4, 'plan_belongstomany_feature_relationship', 'relationship', 'features', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Models\\\\Feature\",\"table\":\"features\",\"type\":\"belongsToMany\",\"column\":\"id\",\"key\":\"id\",\"label\":\"title\",\"pivot_table\":\"plan_features\",\"pivot\":\"1\",\"taggable\":null}', 9),
+(36, 4, 'plan_belongstomany_feature_relationship', 'relationship', 'features', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Models\\\\Feature\",\"table\":\"features\",\"type\":\"belongsToMany\",\"column\":\"id\",\"key\":\"id\",\"label\":\"title\",\"pivot_table\":\"plan_features\",\"pivot\":\"1\",\"taggable\":\"0\"}', 9),
 (37, 6, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
-(38, 6, 'title_1', 'text', 'Title 1', 0, 1, 1, 1, 1, 1, '{}', 2),
+(38, 6, 'title_1', 'text', 'Title 1', 0, 1, 1, 0, 0, 0, '{}', 2),
 (39, 6, 'overview_1', 'rich_text_box', 'Overview 1', 0, 0, 1, 1, 1, 1, '{}', 3),
-(40, 6, 'title_2', 'text', 'Title 2', 0, 1, 1, 1, 1, 1, '{}', 4),
-(41, 6, 'overview_2', 'rich_text_box', 'Overview 2', 0, 0, 1, 1, 1, 1, '{}', 5),
-(42, 6, 'title_3', 'text', 'Title 3', 0, 1, 1, 1, 1, 1, '{}', 6),
+(40, 6, 'title_2', 'text', 'Title 2', 0, 1, 1, 0, 0, 0, '{}', 4),
+(41, 6, 'overview_2', 'rich_text_box', 'Overview 2', 0, 0, 1, 1, 1, 0, '{}', 5),
+(42, 6, 'title_3', 'text', 'Title 3', 0, 1, 1, 0, 0, 0, '{}', 6),
 (43, 6, 'overview_3', 'rich_text_box', 'Overview 3', 0, 0, 1, 1, 1, 1, '{}', 7),
-(44, 6, 'title_4', 'text', 'Title 4', 0, 1, 1, 1, 1, 1, '{}', 8),
+(44, 6, 'title_4', 'text', 'Title 4', 0, 1, 1, 0, 0, 0, '{}', 8),
 (45, 6, 'overview_4', 'rich_text_box', 'Overview 4', 0, 0, 1, 1, 1, 1, '{}', 9),
 (46, 6, 'image', 'image', 'Image', 0, 1, 1, 1, 1, 1, '{}', 10),
 (47, 6, 'image_alt_tag', 'text', 'Image Alt Tag', 0, 1, 1, 1, 1, 1, '{}', 11),
@@ -166,12 +202,12 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (49, 6, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 13),
 (50, 6, 'deleted_at', 'timestamp', 'Deleted At', 0, 0, 0, 0, 0, 0, '{}', 14),
 (51, 7, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
-(52, 7, 'title', 'text', 'Title', 0, 1, 1, 1, 1, 1, '{}', 2),
-(53, 7, 'overview', 'rich_text_box', 'Overview', 0, 1, 1, 1, 1, 1, '{}', 4),
+(52, 7, 'title', 'text', 'Name', 0, 1, 1, 1, 1, 1, '{}', 2),
+(53, 7, 'overview', 'rich_text_box', 'Overview', 0, 0, 1, 1, 1, 1, '{}', 4),
 (54, 7, 'image', 'image', 'Image', 0, 1, 1, 1, 1, 1, '{}', 5),
-(55, 7, 'image_alt_tag', 'text', 'Image Alt Tag', 0, 1, 1, 1, 1, 1, '{}', 6),
+(55, 7, 'image_alt_tag', 'text', 'Image Alt Tag', 0, 0, 1, 1, 1, 1, '{}', 6),
 (56, 7, 'logo', 'image', 'Logo', 0, 1, 1, 1, 1, 1, '{}', 7),
-(57, 7, 'created_at', 'timestamp', 'Created At', 0, 0, 0, 0, 0, 0, '{}', 8),
+(57, 7, 'created_at', 'timestamp', 'Created At', 0, 1, 0, 0, 0, 0, '{}', 8),
 (58, 7, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 9),
 (59, 7, 'deleted_at', 'timestamp', 'Deleted At', 0, 0, 0, 0, 0, 0, '{}', 10),
 (60, 7, 'slug', 'text', 'Slug', 0, 0, 1, 1, 1, 1, '{\"validation\":{\"rule\":\"required|unique:clients,slug\",\"messages\":{\"required\":\"Please enter the identifier\",\"unique\":\"This identifier is already used\"}},\"slugify\":{\"origin\":\"title\"}}', 3),
@@ -185,7 +221,7 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (68, 8, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 8),
 (69, 8, 'deleted_at', 'timestamp', 'Deleted At', 0, 0, 0, 0, 0, 0, '{}', 9),
 (70, 9, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
-(71, 9, 'title', 'text', 'About Title', 0, 1, 1, 1, 1, 1, '{}', 2),
+(71, 9, 'title', 'text', 'About Title', 0, 1, 1, 0, 0, 0, '{}', 2),
 (73, 9, 'overview', 'rich_text_box', 'About Overview', 0, 1, 1, 1, 1, 1, '{}', 4),
 (74, 9, 'image', 'image', 'About Image', 0, 1, 1, 1, 1, 1, '{}', 5),
 (75, 9, 'image_alt_tag', 'text', 'About Image Alt Tag', 0, 1, 1, 1, 1, 1, '{}', 6),
@@ -207,14 +243,14 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (91, 11, 'icon', 'image', 'Icon', 0, 1, 1, 1, 1, 1, '{}', 4),
 (92, 11, 'image', 'image', 'Image', 0, 1, 1, 1, 1, 1, '{}', 5),
 (93, 11, 'image_alt_tag', 'text', 'Image Alt Tag', 0, 1, 1, 1, 1, 1, '{}', 6),
-(94, 11, 'overview', 'rich_text_box', 'Overview', 0, 1, 1, 1, 1, 1, '{}', 7),
+(94, 11, 'overview', 'rich_text_box', 'Overview', 0, 0, 1, 1, 1, 1, '{}', 7),
 (95, 11, 'created_at', 'timestamp', 'Created At', 0, 0, 1, 0, 0, 0, '{}', 8),
 (96, 11, 'updated_at', 'timestamp', 'Updated At', 0, 0, 1, 0, 0, 0, '{}', 9),
 (97, 11, 'deleted_at', 'timestamp', 'Deleted At', 0, 0, 0, 0, 0, 0, '{}', 10),
 (98, 11, 'slug', 'text', 'Slug', 0, 1, 1, 1, 1, 1, '{\"validation\":{\"rule\":\"required|unique:services,slug\",\"messages\":{\"required\":\"Please enter the identifier\",\"unique\":\"This identifier is already used\"}},\"slugify\":{\"origin\":\"title\"}}', 3),
-(99, 9, 'sub_title', 'text', 'About Sub Title', 0, 1, 1, 1, 1, 1, '{}', 3),
+(99, 9, 'sub_title', 'text', 'About Sub Title', 0, 1, 1, 0, 0, 0, '{}', 3),
 (100, 9, 'footer_dsc', 'rich_text_box', 'Footer Description', 0, 1, 1, 1, 1, 1, '{}', 11),
-(101, 9, 'services_title', 'text', 'Services Title', 0, 1, 1, 1, 1, 1, '{}', 7),
+(101, 9, 'services_title', 'text', 'Services Title', 0, 1, 1, 0, 0, 0, '{}', 7),
 (102, 9, 'services_overview', 'rich_text_box', 'Services Overview', 0, 1, 1, 1, 1, 1, '{}', 8),
 (103, 9, 'services_image', 'image', 'Services Image', 0, 1, 1, 1, 1, 1, '{}', 9),
 (104, 9, 'services_image_alt_tag', 'text', 'Services Image Alt Tag', 0, 1, 1, 1, 1, 1, '{}', 10);
@@ -251,14 +287,14 @@ INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `displa
 (1, 'users', 'users', 'User', 'Users', 'voyager-person', 'TCG\\Voyager\\Models\\User', 'TCG\\Voyager\\Policies\\UserPolicy', 'TCG\\Voyager\\Http\\Controllers\\VoyagerUserController', '', 1, 0, NULL, '2025-03-09 04:08:01', '2025-03-09 04:08:01'),
 (2, 'menus', 'menus', 'Menu', 'Menus', 'voyager-list', 'TCG\\Voyager\\Models\\Menu', NULL, '', '', 1, 0, NULL, '2025-03-09 04:08:01', '2025-03-09 04:08:01'),
 (3, 'roles', 'roles', 'Role', 'Roles', 'voyager-lock', 'TCG\\Voyager\\Models\\Role', NULL, 'TCG\\Voyager\\Http\\Controllers\\VoyagerRoleController', '', 1, 0, NULL, '2025-03-09 04:08:01', '2025-03-09 04:08:01'),
-(4, 'plans', 'plans', 'Plan', 'Plans', 'voyager-buy', 'App\\Models\\Plan', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2025-03-09 12:58:53', '2025-03-09 12:58:53'),
-(5, 'features', 'features', 'Feature', 'Features', 'voyager-check', 'App\\Models\\Feature', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2025-03-09 13:04:10', '2025-03-09 13:04:10'),
-(6, 'about_blocks', 'about-blocks', 'About Block', 'About Blocks', 'voyager-star-two', 'App\\Models\\AboutBlock', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2025-03-09 13:14:47', '2025-03-09 13:15:58'),
-(7, 'clients', 'clients', 'Client', 'Clients', 'voyager-people', 'App\\Models\\Client', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2025-03-09 13:22:03', '2025-03-14 07:40:54'),
+(4, 'plans', 'plans', 'Plan', 'Plans', 'voyager-buy', 'App\\Models\\Plan', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2025-03-09 12:58:53', '2025-03-25 13:28:27'),
+(5, 'features', 'features', 'Feature', 'Features', 'voyager-check', 'App\\Models\\Feature', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2025-03-09 13:04:10', '2025-03-25 13:28:06'),
+(6, 'about_blocks', 'about-blocks', 'About Block', 'About Blocks', 'voyager-star-two', 'App\\Models\\AboutBlock', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2025-03-09 13:14:47', '2025-03-25 13:22:55'),
+(7, 'clients', 'clients', 'Client', 'Clients', 'voyager-people', 'App\\Models\\Client', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2025-03-09 13:22:03', '2025-03-25 13:27:52'),
 (8, 'contacts', 'contacts', 'Contact', 'Contacts', 'voyager-paper-plane', 'App\\Models\\Contact', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2025-03-09 13:23:48', '2025-03-09 13:23:48'),
-(9, 'home_blocks', 'home-blocks', 'Home Block', 'Home Blocks', 'voyager-home', 'App\\Models\\HomeBlock', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2025-03-09 13:25:52', '2025-03-22 10:36:08'),
+(9, 'home_blocks', 'home-blocks', 'Home Block', 'Home Blocks', 'voyager-home', 'App\\Models\\HomeBlock', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2025-03-09 13:25:52', '2025-03-25 13:23:46'),
 (10, 'newsletters', 'newsletters', 'Newsletter', 'Newsletters', 'voyager-mail', 'App\\Models\\Newsletter', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2025-03-09 13:26:52', '2025-03-09 13:26:52'),
-(11, 'services', 'services', 'Service', 'Services', 'voyager-laptop', 'App\\Models\\Service', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2025-03-09 13:28:39', '2025-03-14 07:41:13');
+(11, 'services', 'services', 'Service', 'Services', 'voyager-laptop', 'App\\Models\\Service', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2025-03-09 13:28:39', '2025-03-25 13:28:42');
 
 -- --------------------------------------------------------
 
@@ -290,6 +326,20 @@ CREATE TABLE `features` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `features`
+--
+
+INSERT INTO `features` (`id`, `title`, `overview`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(3, 'Up to 10,000 annotated data points', '', '2025-03-23 16:07:51', '2025-03-23 16:07:51', NULL),
+(4, 'Basic quality assurance', '', '2025-03-23 16:08:02', '2025-03-23 16:08:02', NULL),
+(5, 'Standard 5-day turnaround time', '', '2025-03-23 16:08:31', '2025-03-23 16:08:31', NULL),
+(6, 'Email support', '', '2025-03-23 16:08:44', '2025-03-23 16:08:44', NULL),
+(7, 'Advanced quality assurance', '', '2025-03-23 16:09:16', '2025-03-23 16:09:16', NULL),
+(8, 'Dedicated account manager', '', '2025-03-23 16:09:29', '2025-03-23 16:09:29', NULL),
+(9, 'Live chat support', '', '2025-03-23 16:09:39', '2025-03-23 16:09:39', NULL),
+(10, 'test feature', NULL, '2025-03-25 16:34:31', '2025-03-25 16:34:31', NULL);
 
 -- --------------------------------------------------------
 
@@ -324,7 +374,7 @@ CREATE TABLE `home_blocks` (
 --
 
 INSERT INTO `home_blocks` (`id`, `title`, `sub_title`, `overview`, `image`, `image_alt_tag`, `created_at`, `updated_at`, `deleted_at`, `whatsapp`, `gmail`, `linkedin`, `instagram`, `facebook`, `footer_dsc`, `services_title`, `services_overview`, `services_image`, `services_image_alt_tag`) VALUES
-(1, 'About DataUp – The Database Engine', '<p>Empowering AI with High-Quality Data</p>', '<p>At DataUp, we specialize in data annotation and curation services, helping businesses and AI-driven companies build high-quality datasets for machine learning and artificial intelligence. Our goal is to streamline the data preparation process, ensuring accuracy, efficiency, and scalability for AI models.</p>', NULL, NULL, NULL, '2025-03-22 10:41:19', NULL, NULL, NULL, NULL, NULL, NULL, '<p>Dobase &ndash; an open source database engine built for performance and scalability. Free to use and powered by Java and the best open source libraries. &copy; 2025 Dobase</p>', 'نقدم حلول معالجة بيانات متخصصة مصممة وفقًا لاحتياجات الذكاء الاصطناعي والتعلم الآلي.  تضمن خدمتنا لوضع العلامات بيانات موسومة عالية الجودة لتدريب الذكاء الاصطناعي', '<p class=\"\" data-start=\"502\" data-end=\"535\"><strong data-start=\"502\" data-end=\"533\">أنواع العلامات التي نقدمها:</strong></p>\r\n<ul data-start=\"536\" data-end=\"645\" data-is-last-node=\"\" data-is-only-node=\"\">\r\n<li class=\"\" data-start=\"536\" data-end=\"556\">\r\n<p class=\"\" data-start=\"538\" data-end=\"556\">وضع علامات الصور</p>\r\n</li>\r\n<li class=\"\" data-start=\"557\" data-end=\"578\">\r\n<p class=\"\" data-start=\"559\" data-end=\"578\">وضع علامات النصوص</p>\r\n</li>\r\n<li class=\"\" data-start=\"579\" data-end=\"601\">\r\n<p class=\"\" data-start=\"581\" data-end=\"601\">وضع علامات الفيديو</p>\r\n</li>\r\n<li class=\"\" data-start=\"602\" data-end=\"645\">\r\n<p class=\"\" data-start=\"604\" data-end=\"645\">وضع علامات السحابة النقطية ثلاثية الأبعاد</p>\r\n</li>\r\n</ul>', 'home-blocks\\March2025\\1SXDniFxCJPvnKpiV6sz.png', 'Services Image Alt Tag');
+(1, '', 'Empowering AI with High-Quality Data', '<p>At DataUp, we specialize in data annotation and curation services, helping businesses and AI-driven companies build high-quality datasets for machine learning and artificial intelligence. Our goal is to streamline the data preparation process, ensuring accuracy, efficiency, and scalability for AI models.</p>', 'home-blocks\\March2025\\n1yx3XUqxuWMaNqfCrYs.png', NULL, NULL, '2025-03-25 16:24:42', NULL, '+972595283778', 'mohammed.ubeid99@gmail.com', 'https://www.linkedin.com/feed/', 'https://www.instagram.com/', 'https://www.facebook.com/', '<p>Dobase &ndash; an open source database engine built for performance and scalability. Free to use and powered by Java and the best open source libraries. &copy; 2025 Dobase</p>', '', '<p>Our data annotation service ensures high-quality labeled datasets for AI training, Types of Annotations We Offer:</p>\n<ul>\n<li>Image Annotation</li>\n<li>Text Annotation</li>\n<li>Video Annotation</li>\n<li>3D Point Cloud Annotation</li>\n</ul>', 'home-blocks\\March2025\\1SXDniFxCJPvnKpiV6sz.png', 'Services Image Alt Tag');
 
 -- --------------------------------------------------------
 
@@ -447,6 +497,14 @@ CREATE TABLE `newsletters` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `newsletters`
+--
+
+INSERT INTO `newsletters` (`id`, `email`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'mohamed@gmail.com', '2025-03-25 09:02:53', '2025-03-25 09:02:53', NULL),
+(2, 'admin@dataup.com', '2025-03-25 16:28:59', '2025-03-25 16:28:59', NULL);
 
 -- --------------------------------------------------------
 
@@ -589,8 +647,6 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 (26, 1),
 (27, 1),
 (28, 1),
-(29, 1),
-(30, 1),
 (31, 1),
 (32, 1),
 (33, 1),
@@ -608,8 +664,6 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 (45, 1),
 (46, 1),
 (47, 1),
-(48, 1),
-(49, 1),
 (50, 1),
 (51, 1),
 (52, 1),
@@ -618,8 +672,6 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 (55, 1),
 (56, 1),
 (57, 1),
-(58, 1),
-(59, 1),
 (60, 1),
 (61, 1),
 (62, 1),
@@ -663,6 +715,15 @@ CREATE TABLE `plans` (
   `deleted_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `plans`
+--
+
+INSERT INTO `plans` (`id`, `title`, `sub_title`, `overview`, `price`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'Starter Plan', 'For Growing Teams', '<p>Perfect for startups and small teams looking to process a limited amount of data with reliable accuracy. Get high-quality annotations with a standard turnaround time.</p>', 99, '2025-03-23 16:01:23', '2025-03-23 16:01:23', NULL),
+(2, 'Professional Plan', 'For Growing Teams', '<p>Designed for scaling AI projects, this plan provides faster processing, advanced quality assurance, and dedicated support to help your team work efficiently.</p>', 299, '2025-03-23 16:03:24', '2025-03-23 16:03:24', NULL),
+(3, 'Enterprise Plan', 'For Large-Scale Needs', '<p>Best for large enterprises and AI-driven companies requiring massive data processing with top-tier quality, API integration, and priority support.</p>', 299, '2025-03-23 16:03:51', '2025-03-23 16:03:51', NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -677,6 +738,26 @@ CREATE TABLE `plan_features` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `plan_features`
+--
+
+INSERT INTO `plan_features` (`id`, `plan_id`, `feature_id`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 3, 3, NULL, NULL, NULL),
+(3, 3, 5, NULL, NULL, NULL),
+(4, 3, 6, NULL, NULL, NULL),
+(5, 3, 7, NULL, NULL, NULL),
+(6, 3, 8, NULL, NULL, NULL),
+(7, 3, 9, NULL, NULL, NULL),
+(8, 2, 7, NULL, NULL, NULL),
+(9, 2, 9, NULL, NULL, NULL),
+(10, 2, 8, NULL, NULL, NULL),
+(11, 2, 6, NULL, NULL, NULL),
+(12, 2, 5, NULL, NULL, NULL),
+(13, 1, 3, NULL, NULL, NULL),
+(14, 1, 4, NULL, NULL, NULL),
+(15, 1, 5, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -718,6 +799,18 @@ CREATE TABLE `services` (
   `deleted_at` timestamp NULL DEFAULT NULL,
   `slug` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `services`
+--
+
+INSERT INTO `services` (`id`, `title`, `icon`, `image`, `image_alt_tag`, `overview`, `created_at`, `updated_at`, `deleted_at`, `slug`) VALUES
+(1, 'Manage & curate', 'services\\March2025\\ft19TcwBqD95if3BVjXg.png', 'services\\March2025\\m9paRvZt67sjWzXAot2J.png', 'Image Alt Tag', '<p>Organize, refine, and optimize video data for fall&nbsp;</p>', '2025-03-24 16:14:37', '2025-03-24 16:14:37', NULL, 'manage-and-curate'),
+(2, 'Annotate & review', 'services\\March2025\\NnyPkrgyFSnZgvn9rL5u.png', 'services\\March2025\\t4PmHUiyTL3urGVwIe5L.png', 'Image Alt Tag', '<p>Label, analyze, and enhance key moments with AI.</p>', '2025-03-24 16:15:22', '2025-03-24 16:15:22', NULL, 'annotate-and-review'),
+(3, 'Evaluate & monitor', 'services\\March2025\\vGtzkWfArHImacfdX7Ge.png', 'services\\March2025\\QCBGrPIlpnXAi6eVINne.png', 'Image Alt Tag', '<p>Track, assess, and improve fall incident detection.</p>', '2025-03-24 16:16:08', '2025-03-24 16:16:08', NULL, 'evaluate-and-monitor'),
+(4, 'evaluate-and-monitorr', NULL, 'services\\March2025\\6qkaQmj5iI6u5z0OCF6l.png', 'Image Alt Tag', '<p>Organize, refine, and optimize video data for fall detection</p>', '2025-03-24 16:17:16', '2025-03-24 16:29:23', NULL, 'evaluate-and-monitorr'),
+(5, 'Annotate & reviewr', NULL, 'services\\March2025\\hmg1Iom58a4WJwHkkn99.png', 'Image Alt Tag', '<p>Track, assess, and improve fall incident detection.</p>', '2025-03-24 16:20:03', '2025-03-24 16:29:15', NULL, 'annotate-and-reviewr'),
+(6, 'Evaluate & monitorr1', NULL, 'services\\March2025\\ZAMtHBcMpHwwD4lihG5Y.png', 'Image Alt Tag', '<p>Track, assess, and improve fall incident detection.</p>', '2025-03-24 16:21:02', '2025-03-24 16:29:06', NULL, 'evaluate-and-monitorr1');
 
 -- --------------------------------------------------------
 
@@ -839,16 +932,74 @@ INSERT INTO `translations` (`id`, `table_name`, `column_name`, `foreign_key`, `l
 (63, 'about_blocks', 'overview_3', 1, 'ar', '<p data-pm-slice=\"0 0 []\">في داتا اب، نحن شغوفون بتمكين مستقبل الذكاء الاصطناعي من خلال خدمات دقيقة وعالية الجودة لتصنيف البيانات وتنقيحها. تكمن خبرتنا في وضع العلامات على البيانات، معالجتها، وإدارتها، مما يضمن للشركات والمؤسسات المعتمدة على الذكاء الاصطناعي تطوير نماذج تعلم آلي أكثر دقة وكفاءة.</p>', '2025-03-14 07:45:15', '2025-03-14 07:45:15'),
 (64, 'about_blocks', 'title_4', 1, 'ar', 'لماذا تختار داتا اب؟', '2025-03-14 07:45:15', '2025-03-14 07:45:15'),
 (65, 'about_blocks', 'overview_4', 1, 'ar', '<p>الجودة والدقة &ndash; تصنيف البيانات بواسطة خبراء لضمان أفضل النتائج.<br data-start=\"63\" data-end=\"66\">الكفاءة &ndash; أوقات استجابة سريعة دون التأثير على الدقة.<br data-start=\"118\" data-end=\"121\">القابلية للتوسع &ndash; حلول مرنة ومخصصة لتلبية احتياجات المشاريع المتنوعة.</p>', '2025-03-14 07:45:15', '2025-03-14 07:45:15'),
-(66, 'home_blocks', 'title', 1, 'ar', 'عن داتا اب – محرك قاعدة البيانات', '2025-03-14 07:46:57', '2025-03-14 07:46:57'),
-(67, 'home_blocks', 'sub_title', 1, 'ar', '<p>تمكين الذكاء الاصطناعي بالبيانات عالية الجودة</p>', '2025-03-14 07:46:57', '2025-03-14 07:46:57'),
-(68, 'home_blocks', 'overview', 1, 'ar', '<p data-pm-slice=\"0 0 []\">في داتا اب، نختص في خدمات تصنيف البيانات وتنقيحها، مما يساعد الشركات والمؤسسات المعتمدة على الذكاء الاصطناعي في بناء مجموعات بيانات عالية الجودة للتعلم الآلي والذكاء الاصطناعي. هدفنا هو تبسيط عملية إعداد البيانات، وضمان الدقة والكفاءة والقابلية للتوسع لنماذج الذكاء الاصطناعي.</p>', '2025-03-14 07:46:57', '2025-03-14 07:46:57'),
+(66, 'home_blocks', 'title', 1, 'ar', 'عن DataUp محرك قاعدة البيانات', '2025-03-14 07:46:57', '2025-03-23 11:31:40'),
+(67, 'home_blocks', 'sub_title', 1, 'ar', 'تمكين الذكاء الاصطناعي بالبيانات عالية الجودة', '2025-03-14 07:46:57', '2025-03-23 11:13:24'),
+(68, 'home_blocks', 'overview', 1, 'ar', '<p data-pm-slice=\"0 0 []\">في DataUp، نحن متخصصون في خدمات وضع العلامات وتنظيم البيانات، لمساعدة الشركات والمؤسسات التي تعتمد على الذكاء الاصطناعي في بناء مجموعات بيانات عالية الجودة لتعلم الآلة والذكاء الاصطناعي. هدفنا هو تبسيط عملية تحضير البيانات، مع ضمان الدقة، والكفاءة، وقابلية التوسع لنماذج الذكاء الاصطناعي</p>', '2025-03-14 07:46:57', '2025-03-25 16:24:42'),
 (69, 'data_rows', 'display_name', 99, 'ar', 'Sub Title', '2025-03-14 07:58:23', '2025-03-14 07:58:23'),
 (70, 'home_blocks', 'footer_dsc', 1, 'ar', '<p><strong data-start=\"0\" data-end=\"10\" data-is-only-node=\"\">Dobase</strong> &ndash; محرك قاعدة بيانات مفتوح المصدر مبني للأداء والقابلية للتوسع. مجاني للاستخدام ومدعوم بلغة جافا وأفضل المكتبات المفتوحة المصدر. &copy; 2025 Dobase</p>', '2025-03-14 07:59:16', '2025-03-14 07:59:16'),
 (71, 'data_rows', 'display_name', 100, 'ar', 'Footer Description', '2025-03-22 10:19:11', '2025-03-22 10:19:11'),
 (72, 'data_rows', 'display_name', 101, 'ar', 'Services Title', '2025-03-22 10:31:13', '2025-03-22 10:31:13'),
 (73, 'data_rows', 'display_name', 102, 'ar', 'Services Overview', '2025-03-22 10:31:13', '2025-03-22 10:31:13'),
 (74, 'data_rows', 'display_name', 103, 'ar', 'Services Image', '2025-03-22 10:31:13', '2025-03-22 10:31:13'),
-(75, 'data_rows', 'display_name', 104, 'ar', 'Services Image Alt Tag', '2025-03-22 10:31:13', '2025-03-22 10:31:13');
+(75, 'data_rows', 'display_name', 104, 'ar', 'Services Image Alt Tag', '2025-03-22 10:31:13', '2025-03-22 10:31:13'),
+(76, 'home_blocks', 'services_overview', 1, 'ar', '<p class=\"\" data-start=\"223\" data-end=\"342\">تضمن خدمتنا لوضع العلامات بيانات موسومة عالية الجودة لتدريب الذكاء الاصطناعي. أنواع العلامات التي نقدمها</p>\n<ul data-start=\"344\" data-end=\"455\" data-is-last-node=\"\" data-is-only-node=\"\">\n<li class=\"\" data-start=\"344\" data-end=\"364\">\n<p class=\"\" data-start=\"346\" data-end=\"364\">وضع علامات الصور</p>\n</li>\n<li class=\"\" data-start=\"365\" data-end=\"386\">\n<p class=\"\" data-start=\"367\" data-end=\"386\">وضع علامات النصوص</p>\n</li>\n<li class=\"\" data-start=\"387\" data-end=\"409\">\n<p class=\"\" data-start=\"389\" data-end=\"409\">وضع علامات الفيديو</p>\n</li>\n<li class=\"\" data-start=\"410\" data-end=\"455\">\n<p class=\"\" data-start=\"412\" data-end=\"455\">وضع علامات السحابة النقطية ثلاثية الأبعاد</p>\n</li>\n</ul>', '2025-03-23 11:35:57', '2025-03-23 11:35:57'),
+(77, 'clients', 'title', 1, 'ar', 'العميل 1', '2025-03-23 13:02:06', '2025-03-23 13:02:06'),
+(78, 'clients', 'overview', 1, 'ar', '<p>العميل 1العميل 1العميل 1العميل 1العميل 1العميل 1العميل 1العميل 1العميل 1العميل 1العميل 1العميل 1العميل 1العميل 1العميل 1العميل 1العميل 1العالعميل 1العميل 1العميل 1العميل 1العميل 1العميل 1العميل 1العميل 1العميل 1</p>', '2025-03-23 13:02:06', '2025-03-23 13:16:36'),
+(79, 'clients', 'title', 2, 'ar', 'العميل 2', '2025-03-23 13:03:03', '2025-03-23 13:03:03'),
+(80, 'clients', 'overview', 2, 'ar', '<p>العميل 2العميل 2العميل 2العميل 2العميل 2العميل 2العميل 2العميل 2العميل 2العميل 2العميل 2العميل 2العميل 2العميل 2العميل 2العميل 2العميل 2العميل 2العميل 2العميل 2العميل 2العميل 2العميل 2العميل 2</p>', '2025-03-23 13:03:03', '2025-03-23 13:16:26'),
+(81, 'clients', 'title', 3, 'ar', 'العميل 3', '2025-03-23 13:03:55', '2025-03-23 13:03:55'),
+(82, 'clients', 'overview', 3, 'ar', '<p>العميل 3العميل 3العميل 3العميل 3العميل 3العميل 3العميل 3العميل 3العميل 3العميل 3العميل 3العميل 3العميلالعميل 3العميل 3العميل 3العميل 3العميل 3العميل 3العميل 3العميل 3العميل 3العميل 3العميل 3العميل 3العميل 3</p>', '2025-03-23 13:03:55', '2025-03-23 13:16:12'),
+(83, 'clients', 'title', 4, 'ar', '3العميل 3العميل', '2025-03-23 13:04:35', '2025-03-23 13:04:35'),
+(84, 'clients', 'overview', 4, 'ar', '<p>3العميل 3العميل 3ال3العميل 3العميل 3ال3العميل 3العميل 3ال3العميال3العميل 3العميل 3ال3العميل 3العميل 3ال3العميل 3العميل 3ال3العميل 3العميل 3ال3العميل 3العميل 3ال3العميل 3العميل 3ل 3ال</p>', '2025-03-23 13:04:35', '2025-03-23 13:15:56'),
+(85, 'clients', 'title', 5, 'ar', '3العميل 3', '2025-03-23 13:05:07', '2025-03-23 13:05:07'),
+(86, 'clients', 'overview', 5, 'ar', '<p>3يالعميل 33العميل 33العميل 33العميل 33العميل 33العميل 33العميل 33العميل 33العميل 33العميل 3</p>', '2025-03-23 13:05:07', '2025-03-23 13:15:37'),
+(87, 'features', 'title', 3, 'ar', 'ما يصل إلى 10,000 نقطة بيانات موسومة', '2025-03-23 16:07:51', '2025-03-23 16:07:51'),
+(88, 'features', 'title', 4, 'ar', 'ضمان جودة أساسي', '2025-03-23 16:08:02', '2025-03-23 16:08:02'),
+(89, 'features', 'title', 5, 'ar', 'وقت تسليم قياسي خلال 5 أيام', '2025-03-23 16:08:31', '2025-03-23 16:08:31'),
+(90, 'features', 'title', 6, 'ar', 'دعم عبر البريد الإلكتروني', '2025-03-23 16:08:44', '2025-03-23 16:08:44'),
+(91, 'features', 'title', 7, 'ar', 'ضمان جودة متقدم', '2025-03-23 16:09:16', '2025-03-23 16:09:16'),
+(92, 'features', 'title', 8, 'ar', 'مدير حساب مخصص', '2025-03-23 16:09:29', '2025-03-23 16:09:29'),
+(93, 'features', 'title', 9, 'ar', 'دعم عبر الدردشة المباشرة', '2025-03-23 16:09:39', '2025-03-23 16:09:39'),
+(94, 'plans', 'title', 3, 'ar', 'الخطة المؤسسية', '2025-03-23 16:10:31', '2025-03-23 16:11:01'),
+(95, 'plans', 'sub_title', 3, 'ar', 'للاحتياجات واسعة النطاق', '2025-03-23 16:10:31', '2025-03-23 16:11:01'),
+(96, 'plans', 'overview', 3, 'ar', '<p class=\"\" data-start=\"1071\" data-end=\"1288\">مثالية للمؤسسات الكبيرة والشركات التي تعتمد على الذكاء الاصطناعي، حيث تتطلب معالجة كميات هائلة من البيانات بأعلى مستويات الجودة، مع تكامل API ودعم أولوية.</p>', '2025-03-23 16:10:31', '2025-03-23 16:11:01'),
+(97, 'plans', 'title', 2, 'ar', 'الخطة الاحترافية', '2025-03-23 16:11:28', '2025-03-23 16:11:28'),
+(98, 'plans', 'sub_title', 2, 'ar', 'للفرق المتنامية', '2025-03-23 16:11:28', '2025-03-23 16:11:28'),
+(99, 'plans', 'overview', 2, 'ar', '<p class=\"\" data-start=\"677\" data-end=\"862\">مصممة لتوسيع نطاق مشاريع الذكاء الاصطناعي، حيث توفر معالجة أسرع، وضمان جودة متقدم، ودعمًا مخصصًا لمساعدة فريقك على العمل بكفاءة.</p>', '2025-03-23 16:11:28', '2025-03-23 16:11:28'),
+(100, 'plans', 'title', 1, 'ar', 'الخطة المبدئية', '2025-03-23 16:11:55', '2025-03-23 16:11:55'),
+(101, 'plans', 'sub_title', 1, 'ar', 'للمشاريع الصغيرة', '2025-03-23 16:11:56', '2025-03-23 16:11:56'),
+(102, 'plans', 'overview', 1, 'ar', '<p class=\"\" data-start=\"251\" data-end=\"459\">مثالية للشركات الناشئة والفرق الصغيرة التي تحتاج إلى معالجة كمية محدودة من البيانات بدقة موثوقة. احصل على بيانات موسومة عالية الجودة مع وقت تسليم قياسي.</p>', '2025-03-23 16:11:56', '2025-03-23 16:11:56'),
+(103, 'services', 'title', 1, 'ar', 'إدارة وتنظيم', '2025-03-24 16:14:37', '2025-03-24 16:14:37'),
+(104, 'services', 'overview', 1, 'ar', '<p>تنظيم وتحسين بيانات الفيديو لاكتشاف حالات السقوط.</p>', '2025-03-24 16:14:37', '2025-03-24 16:14:37'),
+(105, 'services', 'title', 2, 'ar', 'وضع العلامات والمراجعة', '2025-03-24 16:15:22', '2025-03-24 16:15:22'),
+(106, 'services', 'overview', 2, 'ar', '<p>وضع العلامات، وتحليل، وتحسين اللحظات الأساسية باستخدام الذكاء الاصطناعي.</p>', '2025-03-24 16:15:22', '2025-03-24 16:15:22'),
+(107, 'services', 'title', 3, 'ar', 'التقييم والمراقبة', '2025-03-24 16:16:08', '2025-03-24 16:16:08'),
+(108, 'services', 'overview', 3, 'ar', '<p>تتبع، وتقييم، وتحسين اكتشاف حوادث السقوط</p>', '2025-03-24 16:16:08', '2025-03-24 16:16:08'),
+(109, 'services', 'title', 4, 'ar', 'وضع العلامات والمراجعة', '2025-03-24 16:17:16', '2025-03-24 16:17:16'),
+(110, 'services', 'overview', 4, 'ar', '<p>تتبع، وتقييم، وتحسين اكتشاف حوادث السقوط.</p>', '2025-03-24 16:17:16', '2025-03-24 16:17:16'),
+(111, 'services', 'title', 5, 'ar', 'إدارة وتنظيم', '2025-03-24 16:20:03', '2025-03-24 16:20:03'),
+(112, 'services', 'overview', 5, 'ar', '<p>وضع العلامات، وتحليل، وتحسين اللحظات الأساسية باستخدام الذكاء الاصطناعي.</p>', '2025-03-24 16:20:03', '2025-03-24 16:20:03'),
+(113, 'services', 'title', 6, 'ar', 'إدارة وتنظيم', '2025-03-24 16:21:02', '2025-03-24 16:21:02'),
+(114, 'services', 'overview', 6, 'ar', '<p>وضع العلامات، وتحليل، وتحسين اللحظات الأساسية باستخدام الذكاء الاصطناعي</p>', '2025-03-24 16:21:02', '2025-03-24 16:21:02'),
+(115, 'data_rows', 'display_name', 30, 'ar', 'Id', '2025-03-25 13:28:06', '2025-03-25 13:28:06'),
+(116, 'data_rows', 'display_name', 31, 'ar', 'Title', '2025-03-25 13:28:06', '2025-03-25 13:28:06'),
+(117, 'data_rows', 'display_name', 32, 'ar', 'Overview', '2025-03-25 13:28:06', '2025-03-25 13:28:06'),
+(118, 'data_rows', 'display_name', 33, 'ar', 'Created At', '2025-03-25 13:28:06', '2025-03-25 13:28:06'),
+(119, 'data_rows', 'display_name', 34, 'ar', 'Updated At', '2025-03-25 13:28:06', '2025-03-25 13:28:06'),
+(120, 'data_rows', 'display_name', 35, 'ar', 'Deleted At', '2025-03-25 13:28:06', '2025-03-25 13:28:06'),
+(121, 'data_types', 'display_name_singular', 5, 'ar', 'Feature', '2025-03-25 13:28:06', '2025-03-25 13:28:06'),
+(122, 'data_types', 'display_name_plural', 5, 'ar', 'Features', '2025-03-25 13:28:06', '2025-03-25 13:28:06'),
+(123, 'data_rows', 'display_name', 22, 'ar', 'Id', '2025-03-25 13:28:27', '2025-03-25 13:28:27'),
+(124, 'data_rows', 'display_name', 23, 'ar', 'Title', '2025-03-25 13:28:27', '2025-03-25 13:28:27'),
+(125, 'data_rows', 'display_name', 24, 'ar', 'Sub Title', '2025-03-25 13:28:27', '2025-03-25 13:28:27'),
+(126, 'data_rows', 'display_name', 25, 'ar', 'Overview', '2025-03-25 13:28:27', '2025-03-25 13:28:27'),
+(127, 'data_rows', 'display_name', 26, 'ar', 'Price', '2025-03-25 13:28:27', '2025-03-25 13:28:27'),
+(128, 'data_rows', 'display_name', 27, 'ar', 'Created At', '2025-03-25 13:28:27', '2025-03-25 13:28:27'),
+(129, 'data_rows', 'display_name', 28, 'ar', 'Updated At', '2025-03-25 13:28:27', '2025-03-25 13:28:27'),
+(130, 'data_rows', 'display_name', 29, 'ar', 'Deleted At', '2025-03-25 13:28:27', '2025-03-25 13:28:27'),
+(131, 'data_rows', 'display_name', 36, 'ar', 'features', '2025-03-25 13:28:27', '2025-03-25 13:28:27'),
+(132, 'data_types', 'display_name_singular', 4, 'ar', 'Plan', '2025-03-25 13:28:27', '2025-03-25 13:28:27'),
+(133, 'data_types', 'display_name_plural', 4, 'ar', 'Plans', '2025-03-25 13:28:27', '2025-03-25 13:28:27');
 
 -- --------------------------------------------------------
 
@@ -1068,13 +1219,13 @@ ALTER TABLE `about_blocks`
 -- AUTO_INCREMENT for table `clients`
 --
 ALTER TABLE `clients`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `contacts`
 --
 ALTER TABLE `contacts`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `data_rows`
@@ -1098,7 +1249,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `features`
 --
 ALTER TABLE `features`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `home_blocks`
@@ -1128,7 +1279,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `newsletters`
 --
 ALTER TABLE `newsletters`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `permissions`
@@ -1146,13 +1297,13 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `plans`
 --
 ALTER TABLE `plans`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `plan_features`
 --
 ALTER TABLE `plan_features`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `roles`
@@ -1164,7 +1315,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT for table `services`
 --
 ALTER TABLE `services`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `settings`
@@ -1176,7 +1327,7 @@ ALTER TABLE `settings`
 -- AUTO_INCREMENT for table `translations`
 --
 ALTER TABLE `translations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=134;
 
 --
 -- AUTO_INCREMENT for table `users`
